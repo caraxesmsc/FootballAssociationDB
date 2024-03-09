@@ -1,3 +1,5 @@
+#include "HomeForm.h"
+
 #pragma once
 
 namespace FootballAssociationDB {
@@ -93,6 +95,11 @@ namespace FootballAssociationDB {
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		HomeForm^ homeForm = gcnew HomeForm();
+		homeForm->ShowDialog();
+		this->Show();
+		
 	}
 	};
 }
