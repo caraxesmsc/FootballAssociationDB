@@ -1,4 +1,5 @@
 #pragma once
+#include "ClubsForm.h"
 
 namespace FootballAssociationDB {
 
@@ -74,7 +75,7 @@ namespace FootballAssociationDB {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(268, 81);
 			this->button1->TabIndex = 1;
-			this->button1->Text = L"Teams";
+			this->button1->Text = L"Clubs";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &HomeForm::button1_Click);
 			// 
@@ -151,6 +152,7 @@ namespace FootballAssociationDB {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->DoubleBuffered = true;
 			this->Name = L"HomeForm";
 			this->Text = L"HomeForm";
 			this->ResumeLayout(false);
@@ -158,6 +160,10 @@ namespace FootballAssociationDB {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		Form^ clubsForm = gcnew ClubsForm();
+		clubsForm->ShowDialog();
+		this->Show();
 	}
 	};
 }
