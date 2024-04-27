@@ -1,4 +1,10 @@
 #pragma once
+#include "ClubsForm.h"
+#include "StadiumsForm.h"
+#include "StaffForm.h"
+#include "StandingsForm.h"
+#include "GamesForm.h"
+#include "PlayersForm.h"
 
 namespace FootballAssociationDB {
 
@@ -56,6 +62,8 @@ namespace FootballAssociationDB {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ClubsForm::typeid));
+
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->SuspendLayout();
 			// 
@@ -63,21 +71,24 @@ namespace FootballAssociationDB {
 			// 
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->ItemHeight = 16;
-			this->listBox1->Location = System::Drawing::Point(-3, -1);
+			this->listBox1->Location = System::Drawing::Point(320, 95);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(611, 468);
+			this->listBox1->Size = System::Drawing::Size(1048, 692);
 			this->listBox1->TabIndex = 0;
 			// 
 			// ClubsForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(610, 469);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(1366, 792);
 			this->Controls->Add(this->listBox1);
 			this->Name = L"ClubsForm";
 			this->Text = L"ClubsForm";
 			this->Load += gcnew System::EventHandler(this, &ClubsForm::ClubsForm_Load);
 			this->ResumeLayout(false);
+
 		}
 #pragma endregion
 	private: System::Void ClubsForm_Load(System::Object^ sender, System::EventArgs^ e) {
