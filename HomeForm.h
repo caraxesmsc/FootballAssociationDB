@@ -179,24 +179,6 @@ namespace FootballAssociationDB {
 			this->StandingsButton->UseVisualStyleBackColor = false;
 			this->StandingsButton->Click += gcnew System::EventHandler(this, &HomeForm::StandingsButton_Click);
 			// 
-			// panel1
-			// 
-			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->panel1->Controls->Add(this->EditButton);
-			this->panel1->Controls->Add(this->SearchButton);
-			this->panel1->Controls->Add(this->ViewButton);
-			this->panel1->Controls->Add(this->TittleLabel);
-			this->panel1->Controls->Add(this->button1);
-			this->panel1->Controls->Add(this->StadiumsButton);
-			this->panel1->Controls->Add(this->PlayersButton);
-			this->panel1->Controls->Add(this->GamesButton);
-			this->panel1->Controls->Add(this->StaffButton);
-			this->panel1->Controls->Add(this->StandingsButton);
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(356, 801);
-			this->panel1->TabIndex = 7;
-			// 
 			// EditButton
 			// 
 			this->EditButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
@@ -235,6 +217,24 @@ namespace FootballAssociationDB {
 			this->ViewButton->TabIndex = 9;
 			this->ViewButton->Text = L"👁️";
 			this->ViewButton->UseVisualStyleBackColor = false;
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->panel1->Controls->Add(this->EditButton);
+			this->panel1->Controls->Add(this->SearchButton);
+			this->panel1->Controls->Add(this->ViewButton);
+			this->panel1->Controls->Add(this->TittleLabel);
+			this->panel1->Controls->Add(this->button1);
+			this->panel1->Controls->Add(this->StadiumsButton);
+			this->panel1->Controls->Add(this->PlayersButton);
+			this->panel1->Controls->Add(this->GamesButton);
+			this->panel1->Controls->Add(this->StaffButton);
+			this->panel1->Controls->Add(this->StandingsButton);
+			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(356, 801);
+			this->panel1->TabIndex = 7;
+			// 
 			// 
 			// TittleLabel
 			// 
@@ -242,11 +242,11 @@ namespace FootballAssociationDB {
 			this->TittleLabel->BackColor = System::Drawing::Color::Transparent;
 			this->TittleLabel->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 28, System::Drawing::FontStyle::Bold));
 			this->TittleLabel->ForeColor = System::Drawing::Color::Brown;
-			this->TittleLabel->Location = System::Drawing::Point(46, 32);
+			this->TittleLabel->Location = System::Drawing::Point(98, 30);
 			this->TittleLabel->Name = L"TittleLabel";
-			this->TittleLabel->Size = System::Drawing::Size(274, 62);
+			this->TittleLabel->Size = System::Drawing::Size(157, 62);
 			this->TittleLabel->TabIndex = 8;
-			this->TittleLabel->Text = L"Home Page";
+			this->TittleLabel->Text = L"Home";
 			// 
 			// label2
 			// 
