@@ -176,8 +176,7 @@ namespace FootballAssociationDB {
 			this->button1->Size = System::Drawing::Size(262, 63);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Clubs";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &ClubsForm::button1_Click);
+			this->button1->UseVisualStyleBackColor = false; 
 			// 
 			// StadiumsButton
 			// 
@@ -190,8 +189,7 @@ namespace FootballAssociationDB {
 			this->StadiumsButton->Size = System::Drawing::Size(262, 63);
 			this->StadiumsButton->TabIndex = 6;
 			this->StadiumsButton->Text = L"Stadiums";
-			this->StadiumsButton->UseVisualStyleBackColor = false;
-			this->StadiumsButton->Click += gcnew System::EventHandler(this, &ClubsForm::StadiumsButton_Click);
+			this->StadiumsButton->UseVisualStyleBackColor = false; 
 			// 
 			// PlayersButton
 			// 
@@ -204,8 +202,7 @@ namespace FootballAssociationDB {
 			this->PlayersButton->Size = System::Drawing::Size(262, 63);
 			this->PlayersButton->TabIndex = 2;
 			this->PlayersButton->Text = L"Players";
-			this->PlayersButton->UseVisualStyleBackColor = false;
-			this->PlayersButton->Click += gcnew System::EventHandler(this, &ClubsForm::PlayersButton_Click_1);
+			this->PlayersButton->UseVisualStyleBackColor = false; 
 			// 
 			// GamesButton
 			// 
@@ -218,8 +215,7 @@ namespace FootballAssociationDB {
 			this->GamesButton->Size = System::Drawing::Size(262, 63);
 			this->GamesButton->TabIndex = 5;
 			this->GamesButton->Text = L"Games";
-			this->GamesButton->UseVisualStyleBackColor = false;
-			this->GamesButton->Click += gcnew System::EventHandler(this, &ClubsForm::GamesButton_Click);
+			this->GamesButton->UseVisualStyleBackColor = false; 
 			// 
 			// StaffButton
 			// 
@@ -232,8 +228,7 @@ namespace FootballAssociationDB {
 			this->StaffButton->Size = System::Drawing::Size(262, 63);
 			this->StaffButton->TabIndex = 3;
 			this->StaffButton->Text = L"Staff";
-			this->StaffButton->UseVisualStyleBackColor = false;
-			this->StaffButton->Click += gcnew System::EventHandler(this, &ClubsForm::StaffButton_Click);
+			this->StaffButton->UseVisualStyleBackColor = false; 
 			// 
 			// StandingsButton
 			// 
@@ -246,8 +241,7 @@ namespace FootballAssociationDB {
 			this->StandingsButton->Size = System::Drawing::Size(262, 63);
 			this->StandingsButton->TabIndex = 4;
 			this->StandingsButton->Text = L"Standings";
-			this->StandingsButton->UseVisualStyleBackColor = false;
-			//this->StandingsButton->Click += gcnew System::EventHandler(this, &ClubsForm::StandingsButton_Click);
+			this->StandingsButton->UseVisualStyleBackColor = false; 
 			// 
 			// ClubsForm
 			// 
@@ -286,46 +280,6 @@ namespace FootballAssociationDB {
 			MessageBox::Show(ex->Message);
 		}
 	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Hide();
-		Form^ clubsForm = gcnew ClubsForm();
-		clubsForm->ShowDialog();
-		this->Show();
-	}
-
-	private: System::Void StaffButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Hide();
-		Form^ staffForm = gcnew StaffForm();
-		staffForm->ShowDialog();
-		this->Show();
-	}
-
-
-
-private: System::Void GamesButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	Form^ gamesForm = gcnew GamesForm();
-	gamesForm->ShowDialog();
-	this->Show();
-}
-private: System::Void PlayersButton_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	Form^ playersForm = gcnew PlayersForm();
-	playersForm->ShowDialog();
-	this->Show();
-}
-
-private: System::Void StadiumsButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	Form^ stadiumsForm = gcnew StadiumsForm();
-	stadiumsForm->ShowDialog();
-	this->Show();
-}
-//private: System::Void StandingsButton_Click(System::Object^ sender, System::EventArgs^ e) {
-//	this->Hide();
-//	Form^ standingsForm = gcnew StandingsForm();
-//	standingsForm->ShowDialog();
-//	this->Show();
-//}
+	
 };
 }

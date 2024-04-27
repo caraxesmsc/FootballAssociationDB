@@ -2,8 +2,10 @@
 #include "ClubsForm.h"
 #include "StadiumsForm.h"
 #include "StaffForm.h"
+#include "StandingsForm.h"
 #include "GamesForm.h"
 #include "PlayersForm.h"
+
 namespace FootballAssociationDB {
 
 	using namespace System;
@@ -12,7 +14,7 @@ namespace FootballAssociationDB {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-using namespace System::Data::SqlClient;
+	using namespace System::Data::SqlClient;
 
 	/// <summary>
 	/// Summary for StandingsForm
@@ -59,7 +61,7 @@ using namespace System::Data::SqlClient;
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -185,7 +187,7 @@ using namespace System::Data::SqlClient;
 			this->StadiumsButton->Size = System::Drawing::Size(262, 63);
 			this->StadiumsButton->TabIndex = 6;
 			this->StadiumsButton->Text = L"Stadiums";
-			this->StadiumsButton->UseVisualStyleBackColor = false; 
+			this->StadiumsButton->UseVisualStyleBackColor = false;
 			// 
 			// PlayersButton
 			// 
@@ -198,7 +200,7 @@ using namespace System::Data::SqlClient;
 			this->PlayersButton->Size = System::Drawing::Size(262, 63);
 			this->PlayersButton->TabIndex = 2;
 			this->PlayersButton->Text = L"Players";
-			this->PlayersButton->UseVisualStyleBackColor = false; 
+			this->PlayersButton->UseVisualStyleBackColor = false;
 			// 
 			// GamesButton
 			// 
@@ -211,7 +213,7 @@ using namespace System::Data::SqlClient;
 			this->GamesButton->Size = System::Drawing::Size(262, 63);
 			this->GamesButton->TabIndex = 5;
 			this->GamesButton->Text = L"Games";
-			this->GamesButton->UseVisualStyleBackColor = false; 
+			this->GamesButton->UseVisualStyleBackColor = false;
 			// 
 			// StaffButton
 			// 
@@ -224,7 +226,7 @@ using namespace System::Data::SqlClient;
 			this->StaffButton->Size = System::Drawing::Size(262, 63);
 			this->StaffButton->TabIndex = 3;
 			this->StaffButton->Text = L"Staff";
-			this->StaffButton->UseVisualStyleBackColor = false; 
+			this->StaffButton->UseVisualStyleBackColor = false;
 			// 
 			// StandingsButton
 			// 
@@ -237,7 +239,7 @@ using namespace System::Data::SqlClient;
 			this->StandingsButton->Size = System::Drawing::Size(262, 63);
 			this->StandingsButton->TabIndex = 4;
 			this->StandingsButton->Text = L"Standings";
-			this->StandingsButton->UseVisualStyleBackColor = false; 
+			this->StandingsButton->UseVisualStyleBackColor = false;
 			// 
 			// StandingsForm
 			// 
@@ -275,8 +277,8 @@ using namespace System::Data::SqlClient;
 			MessageBox::Show(ex->Message);
 		}
 	}
-		
 
-		
+
+
 	};
 }
