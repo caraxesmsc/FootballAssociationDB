@@ -1,5 +1,4 @@
-﻿#pragma once
-#include "ClubsForm.h"
+﻿#pragma once 
 #include "StadiumsForm.h"
 #include "StaffForm.h"
 #include "StandingsForm.h"
@@ -178,6 +177,7 @@ namespace FootballAssociationDB {
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Clubs";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &ClubsForm::button1_Click);
 			// 
 			// StadiumsButton
 			// 
@@ -247,7 +247,7 @@ namespace FootballAssociationDB {
 			this->StandingsButton->TabIndex = 4;
 			this->StandingsButton->Text = L"Standings";
 			this->StandingsButton->UseVisualStyleBackColor = false;
-			this->StandingsButton->Click += gcnew System::EventHandler(this, &ClubsForm::StandingsButton_Click);
+			//this->StandingsButton->Click += gcnew System::EventHandler(this, &ClubsForm::StandingsButton_Click);
 			// 
 			// ClubsForm
 			// 
@@ -299,12 +299,7 @@ namespace FootballAssociationDB {
 		staffForm->ShowDialog();
 		this->Show();
 	}
-private: System::Void StandingsButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	Form^ standingsForm = gcnew StandingsForm();
-	standingsForm->ShowDialog();
-	this->Show();
-}
+
 
 
 private: System::Void GamesButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -326,5 +321,11 @@ private: System::Void StadiumsButton_Click(System::Object^ sender, System::Event
 	stadiumsForm->ShowDialog();
 	this->Show();
 }
+//private: System::Void StandingsButton_Click(System::Object^ sender, System::EventArgs^ e) {
+//	this->Hide();
+//	Form^ standingsForm = gcnew StandingsForm();
+//	standingsForm->ShowDialog();
+//	this->Show();
+//}
 };
 }
