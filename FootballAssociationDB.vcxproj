@@ -120,12 +120,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GamesForm.cpp" />
     <ClCompile Include="HomeForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="ClubsForm.cpp" />
+    <ClCompile Include="PlayersForm.cpp" />
     <ClCompile Include="StadiumsForm.cpp" />
+    <ClCompile Include="StaffForm.cpp" />
+    <ClCompile Include="StandingsForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GamesForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="HomeForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -135,11 +142,23 @@
     <ClInclude Include="ClubsForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PlayersForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="StadiumsForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="StaffForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="StandingsForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GamesForm.resx">
+      <DependentUpon>GamesForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.h</DependentUpon>
     </EmbeddedResource>
@@ -149,8 +168,17 @@
     <EmbeddedResource Include="ClubsForm.resx">
       <DependentUpon>ClubsForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlayersForm.resx">
+      <DependentUpon>PlayersForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StadiumsForm.resx">
       <DependentUpon>StadiumsForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandingsForm.resx">
+      <DependentUpon>StandingsForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

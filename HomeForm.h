@@ -1,6 +1,10 @@
 #pragma once
 #include "ClubsForm.h"
 #include "StadiumsForm.h"
+#include "StaffForm.h"
+#include "StandingsForm.h"
+#include "GamesForm.h"
+#include "PlayersForm.h"
 
 namespace FootballAssociationDB {
 
@@ -37,12 +41,16 @@ namespace FootballAssociationDB {
 			}
 		}
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ StadiumsButton;
+	private: System::Windows::Forms::Button^ PlayersButton;
 
-	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Button^ StaffButton;
+
+	private: System::Windows::Forms::Button^ StadiumsButton;
+	private: System::Windows::Forms::Button^ GamesButton;
+	private: System::Windows::Forms::Button^ StandingsButton;
+
+
+
 	protected:
 
 	private:
@@ -61,11 +69,11 @@ namespace FootballAssociationDB {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(HomeForm::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->PlayersButton = (gcnew System::Windows::Forms::Button());
+			this->StaffButton = (gcnew System::Windows::Forms::Button());
 			this->StadiumsButton = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->GamesButton = (gcnew System::Windows::Forms::Button());
+			this->StandingsButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -81,29 +89,31 @@ namespace FootballAssociationDB {
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &HomeForm::button1_Click);
 			// 
-			// button2
+			// PlayersButton
 			// 
-			this->button2->BackColor = System::Drawing::Color::Silver;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->PlayersButton->BackColor = System::Drawing::Color::Silver;
+			this->PlayersButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(191, 354);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(268, 81);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"Players";
-			this->button2->UseVisualStyleBackColor = false;
+			this->PlayersButton->Location = System::Drawing::Point(191, 354);
+			this->PlayersButton->Name = L"PlayersButton";
+			this->PlayersButton->Size = System::Drawing::Size(268, 81);
+			this->PlayersButton->TabIndex = 2;
+			this->PlayersButton->Text = L"Players";
+			this->PlayersButton->UseVisualStyleBackColor = false;
+			this->PlayersButton->Click += gcnew System::EventHandler(this, &HomeForm::PlayersButton_Click);
 			// 
-			// button3
+			// StaffButton
 			// 
-			this->button3->BackColor = System::Drawing::Color::Silver;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->StaffButton->BackColor = System::Drawing::Color::Silver;
+			this->StaffButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(191, 503);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(268, 81);
-			this->button3->TabIndex = 3;
-			this->button3->Text = L"Staff";
-			this->button3->UseVisualStyleBackColor = false;
+			this->StaffButton->Location = System::Drawing::Point(191, 503);
+			this->StaffButton->Name = L"StaffButton";
+			this->StaffButton->Size = System::Drawing::Size(268, 81);
+			this->StaffButton->TabIndex = 3;
+			this->StaffButton->Text = L"Staff";
+			this->StaffButton->UseVisualStyleBackColor = false;
+			this->StaffButton->Click += gcnew System::EventHandler(this, &HomeForm::StaffButton_Click);
 			// 
 			// StadiumsButton
 			// 
@@ -118,29 +128,31 @@ namespace FootballAssociationDB {
 			this->StadiumsButton->UseVisualStyleBackColor = false;
 			this->StadiumsButton->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &HomeForm::StadiumsButton_MouseClick);
 			// 
-			// button5
+			// GamesButton
 			// 
-			this->button5->BackColor = System::Drawing::Color::Silver;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->GamesButton->BackColor = System::Drawing::Color::Silver;
+			this->GamesButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(900, 354);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(268, 81);
-			this->button5->TabIndex = 5;
-			this->button5->Text = L"Games";
-			this->button5->UseVisualStyleBackColor = false;
+			this->GamesButton->Location = System::Drawing::Point(900, 354);
+			this->GamesButton->Name = L"GamesButton";
+			this->GamesButton->Size = System::Drawing::Size(268, 81);
+			this->GamesButton->TabIndex = 5;
+			this->GamesButton->Text = L"Games";
+			this->GamesButton->UseVisualStyleBackColor = false;
+			this->GamesButton->Click += gcnew System::EventHandler(this, &HomeForm::GamesButton_Click);
 			// 
-			// button6
+			// StandingsButton
 			// 
-			this->button6->BackColor = System::Drawing::Color::Silver;
-			this->button6->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->StandingsButton->BackColor = System::Drawing::Color::Silver;
+			this->StandingsButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->Location = System::Drawing::Point(900, 201);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(268, 81);
-			this->button6->TabIndex = 4;
-			this->button6->Text = L"Standings";
-			this->button6->UseVisualStyleBackColor = false;
+			this->StandingsButton->Location = System::Drawing::Point(900, 201);
+			this->StandingsButton->Name = L"StandingsButton";
+			this->StandingsButton->Size = System::Drawing::Size(268, 81);
+			this->StandingsButton->TabIndex = 4;
+			this->StandingsButton->Text = L"Standings";
+			this->StandingsButton->UseVisualStyleBackColor = false;
+			this->StandingsButton->Click += gcnew System::EventHandler(this, &HomeForm::StandingsButton_Click);
 			// 
 			// HomeForm
 			// 
@@ -150,10 +162,10 @@ namespace FootballAssociationDB {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1366, 792);
 			this->Controls->Add(this->StadiumsButton);
-			this->Controls->Add(this->button5);
-			this->Controls->Add(this->button6);
-			this->Controls->Add(this->button3);
-			this->Controls->Add(this->button2);
+			this->Controls->Add(this->GamesButton);
+			this->Controls->Add(this->StandingsButton);
+			this->Controls->Add(this->StaffButton);
+			this->Controls->Add(this->PlayersButton);
 			this->Controls->Add(this->button1);
 			this->DoubleBuffered = true;
 			this->Name = L"HomeForm";
@@ -174,5 +186,31 @@ namespace FootballAssociationDB {
 		stadiumsForm->ShowDialog();
 		this->Show();
 	}
+	private: System::Void StaffButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		Form^ staffForm = gcnew StaffForm();
+		staffForm->ShowDialog();
+		this->Show();
+}
+private: System::Void StandingsButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		Form^ standingsForm = gcnew StandingsForm();
+		standingsForm->ShowDialog();
+		this->Show();
+}
+
+
+private: System::Void GamesButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	Form^ gamesForm = gcnew GamesForm();
+	gamesForm->ShowDialog();
+	this->Show();
+}
+private: System::Void PlayersButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	Form^ playersForm = gcnew PlayersForm();
+	playersForm->ShowDialog();
+	this->Show();
+}
 };
 }
