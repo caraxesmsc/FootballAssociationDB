@@ -123,6 +123,7 @@
     <ClCompile Include="HomeForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="ClubsForm.cpp" />
+    <ClCompile Include="StadiumsForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HomeForm.h">
@@ -132,6 +133,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ClubsForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="StadiumsForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -144,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClubsForm.resx">
       <DependentUpon>ClubsForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StadiumsForm.resx">
+      <DependentUpon>StadiumsForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,5 +1,6 @@
 #pragma once
 #include "ClubsForm.h"
+#include "StadiumsForm.h"
 
 namespace FootballAssociationDB {
 
@@ -38,7 +39,8 @@ namespace FootballAssociationDB {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ StadiumsButton;
+
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button6;
 	protected:
@@ -61,7 +63,7 @@ namespace FootballAssociationDB {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->StadiumsButton = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
@@ -103,17 +105,18 @@ namespace FootballAssociationDB {
 			this->button3->Text = L"Staff";
 			this->button3->UseVisualStyleBackColor = false;
 			// 
-			// button4
+			// StadiumsButton
 			// 
-			this->button4->BackColor = System::Drawing::Color::Silver;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->StadiumsButton->BackColor = System::Drawing::Color::Silver;
+			this->StadiumsButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(900, 503);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(268, 81);
-			this->button4->TabIndex = 6;
-			this->button4->Text = L"Stadiums";
-			this->button4->UseVisualStyleBackColor = false;
+			this->StadiumsButton->Location = System::Drawing::Point(900, 503);
+			this->StadiumsButton->Name = L"StadiumsButton";
+			this->StadiumsButton->Size = System::Drawing::Size(268, 81);
+			this->StadiumsButton->TabIndex = 6;
+			this->StadiumsButton->Text = L"Stadiums";
+			this->StadiumsButton->UseVisualStyleBackColor = false;
+			this->StadiumsButton->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &HomeForm::StadiumsButton_MouseClick);
 			// 
 			// button5
 			// 
@@ -146,7 +149,7 @@ namespace FootballAssociationDB {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1366, 792);
-			this->Controls->Add(this->button4);
+			this->Controls->Add(this->StadiumsButton);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button3);
@@ -165,5 +168,11 @@ namespace FootballAssociationDB {
 		clubsForm->ShowDialog();
 		this->Show();
 	}
-	};
+	private: System::Void StadiumsButton_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+		this->Hide();
+		Form^ stadiumsForm = gcnew StadiumsForm();
+		stadiumsForm->ShowDialog();
+		this->Show();
+	}
+};
 }

@@ -8,20 +8,19 @@ namespace FootballAssociationDB {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace System::Data::SqlClient; // 7ot dah by2olo en ana 3ayz a3ml connection m3 el database
-
+using namespace System::Data::SqlClient;
 
 	/// <summary>
-	/// Summary for TeamsForm
+	/// Summary for StadiumsForm
 	/// </summary>
-	public ref class ClubsForm : public System::Windows::Forms::Form
+	public ref class StadiumsForm : public System::Windows::Forms::Form
 	{
 	public:
 		String^ connectionStr = "Data Source=KassabLaptop;Initial Catalog=Football_Association;Integrated Security=True;"; // da el connection string 3ashan a3ml connect m3 el database W LAZM T5'YARO L BTA3K ENTA
-		ClubsForm(void)
+
+		StadiumsForm(void)
 		{
 			InitializeComponent();
-
 			//
 			//TODO: Add the constructor code here
 			//
@@ -31,7 +30,7 @@ namespace FootballAssociationDB {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~ClubsForm()
+		~StadiumsForm()
 		{
 			if (components)
 			{
@@ -39,8 +38,6 @@ namespace FootballAssociationDB {
 			}
 		}
 	private: System::Windows::Forms::ListBox^ listBox1;
-	protected:
-
 	protected:
 
 	private:
@@ -63,34 +60,35 @@ namespace FootballAssociationDB {
 			// 
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->ItemHeight = 16;
-			this->listBox1->Location = System::Drawing::Point(-3, -1);
+			this->listBox1->Location = System::Drawing::Point(12, 12);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(611, 468);
+			this->listBox1->Size = System::Drawing::Size(589, 436);
 			this->listBox1->TabIndex = 0;
 			// 
-			// ClubsForm
+			// StadiumsForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(610, 469);
+			this->ClientSize = System::Drawing::Size(613, 471);
 			this->Controls->Add(this->listBox1);
-			this->Name = L"ClubsForm";
-			this->Text = L"ClubsForm";
-			this->Load += gcnew System::EventHandler(this, &ClubsForm::ClubsForm_Load);
+			this->Name = L"StadiumsForm";
+			this->Text = L"StadiumsForm";
+			this->Load += gcnew System::EventHandler(this, &StadiumsForm::StadiumsForm_Load);
 			this->ResumeLayout(false);
+
 		}
 #pragma endregion
-	private: System::Void ClubsForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void StadiumsForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		try {
 			SqlConnection con(connectionStr);
 			con.Open();
-			String^ query = "SELECT * FROM club";
+			String^ query = "SELECT * FROM stadium";
 			SqlCommand cmd(query, % con);
 			SqlDataReader^ reader = cmd.ExecuteReader();
 			while (reader->Read())
 			{
 				// Add the name of the club to the list box
-				listBox1->Items->Add(reader->GetString(1) + " Managed by: " + reader->GetString(2) + " Founded in the year: " + reader->GetInt32(4));
+				listBox1->Items->Add(reader->GetString(1) + " Capacity: " + reader->GetInt32(2));
 			}
 			con.Close();
 		}
