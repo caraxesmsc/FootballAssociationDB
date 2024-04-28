@@ -16,7 +16,7 @@ using namespace System::Data::SqlClient;
 	public ref class StadiumsForm : public System::Windows::Forms::Form
 	{
 	public:
-		String^ connectionStr = "Data Source=LAPTOP-ABIJFMBV;Initial Catalog=Football_AssociationFinal;Integrated Security=True;"; // da el connection string 3ashan a3ml connect m3 el database W LAZM T5'YARO L BTA3K ENTA
+		String^ connectionStr = "Data Source=KassabLaptop;Initial Catalog=Football_Association;Integrated Security=True;"; // da el connection string 3ashan a3ml connect m3 el database W LAZM T5'YARO L BTA3K ENTA
 
 		StadiumsForm(void)
 		{
@@ -256,13 +256,12 @@ using namespace System::Data::SqlClient;
 		try {
 			SqlConnection con(connectionStr);
 			con.Open();
-			String^ query = "SELECT * FROM stadium";
+			String^ query = "SELECT * FROM GetStadiumDetails();";
 			SqlCommand cmd(query, % con);
 			SqlDataReader^ reader = cmd.ExecuteReader();
 			while (reader->Read())
 			{
-				// Add the name of the club to the list box
-				listBox1->Items->Add(reader->GetString(1) + " Capacity: " + reader->GetInt32(2));
+				listBox1->Items->Add(reader->GetString(0) + "  " + reader->GetInt32(1) + "  " + reader->GetString(2) + "  " + reader->GetString(3));
 			}
 			con.Close();
 		}

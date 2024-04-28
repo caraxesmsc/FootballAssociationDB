@@ -20,7 +20,7 @@ namespace FootballAssociationDB {
 	public ref class PlayersForm : public System::Windows::Forms::Form
 	{
 	public:
-		String^ connectionStr = "Data Source=LAPTOP-ABIJFMBV;Initial Catalog=Football_AssociationFinal;Integrated Security=True;"; // da el connection string 3ashan a3ml connect m3 el database W LAZM T5'YARO L BTA3K ENTA
+		String^ connectionStr = "Data Source=KassabLaptop;Initial Catalog=Football_Association;Integrated Security=True;"; // da el connection string 3ashan a3ml connect m3 el database W LAZM T5'YARO L BTA3K ENTA
 
 		PlayersForm(void)
 		{
@@ -267,7 +267,7 @@ namespace FootballAssociationDB {
 			SqlDataReader^ reader = cmd.ExecuteReader();
 			while (reader->Read())
 			{
-				listBox1->Items->Add(reader->GetString(1) + " Plays For: " + reader->GetInt32(10));
+				listBox1->Items->Add(reader->GetString(1) + " Plays For: " + reader->GetInt32(10) + reader->GetString(3));
 			}
 			con.Close();
 		}
