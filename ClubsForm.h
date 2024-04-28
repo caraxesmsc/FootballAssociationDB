@@ -1,12 +1,14 @@
 ﻿#pragma once 
-#include "StadiumsForm.h"
+
+	//include the identifiers of other forms
+#include "PlayersForm.h"
 #include "StaffForm.h"
 #include "StandingsForm.h"
 #include "GamesForm.h"
-#include "PlayersForm.h"
+#include "StadiumsForm.h"
 
 namespace FootballAssociationDB {
-
+	
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -14,6 +16,7 @@ namespace FootballAssociationDB {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Data::SqlClient; // 7ot dah by2olo en ana 3ayz a3ml connection m3 el database
+
 
 
 	/// <summary>
@@ -55,6 +58,7 @@ namespace FootballAssociationDB {
 	private: System::Windows::Forms::Button^ GamesButton;
 	private: System::Windows::Forms::Button^ StaffButton;
 	private: System::Windows::Forms::Button^ StandingsButton;
+	private: System::Windows::Forms::Label^ label1;
 	protected:
 
 	protected:
@@ -84,6 +88,7 @@ namespace FootballAssociationDB {
 			this->GamesButton = (gcnew System::Windows::Forms::Button());
 			this->StaffButton = (gcnew System::Windows::Forms::Button());
 			this->StandingsButton = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -167,7 +172,7 @@ namespace FootballAssociationDB {
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::DimGray;
+			this->button1->BackColor = System::Drawing::Color::IndianRed;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -176,7 +181,8 @@ namespace FootballAssociationDB {
 			this->button1->Size = System::Drawing::Size(262, 63);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Clubs";
-			this->button1->UseVisualStyleBackColor = false; 
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &ClubsForm::button1_Click);
 			// 
 			// StadiumsButton
 			// 
@@ -189,7 +195,8 @@ namespace FootballAssociationDB {
 			this->StadiumsButton->Size = System::Drawing::Size(262, 63);
 			this->StadiumsButton->TabIndex = 6;
 			this->StadiumsButton->Text = L"Stadiums";
-			this->StadiumsButton->UseVisualStyleBackColor = false; 
+			this->StadiumsButton->UseVisualStyleBackColor = false;
+			this->StadiumsButton->Click += gcnew System::EventHandler(this, &ClubsForm::StadiumsButton_Click);
 			// 
 			// PlayersButton
 			// 
@@ -202,7 +209,7 @@ namespace FootballAssociationDB {
 			this->PlayersButton->Size = System::Drawing::Size(262, 63);
 			this->PlayersButton->TabIndex = 2;
 			this->PlayersButton->Text = L"Players";
-			this->PlayersButton->UseVisualStyleBackColor = false; 
+			this->PlayersButton->UseVisualStyleBackColor = false;
 			// 
 			// GamesButton
 			// 
@@ -215,7 +222,8 @@ namespace FootballAssociationDB {
 			this->GamesButton->Size = System::Drawing::Size(262, 63);
 			this->GamesButton->TabIndex = 5;
 			this->GamesButton->Text = L"Games";
-			this->GamesButton->UseVisualStyleBackColor = false; 
+			this->GamesButton->UseVisualStyleBackColor = false;
+			this->GamesButton->Click += gcnew System::EventHandler(this, &ClubsForm::GamesButton_Click);
 			// 
 			// StaffButton
 			// 
@@ -228,7 +236,8 @@ namespace FootballAssociationDB {
 			this->StaffButton->Size = System::Drawing::Size(262, 63);
 			this->StaffButton->TabIndex = 3;
 			this->StaffButton->Text = L"Staff";
-			this->StaffButton->UseVisualStyleBackColor = false; 
+			this->StaffButton->UseVisualStyleBackColor = false;
+			this->StaffButton->Click += gcnew System::EventHandler(this, &ClubsForm::StaffButton_Click);
 			// 
 			// StandingsButton
 			// 
@@ -241,7 +250,16 @@ namespace FootballAssociationDB {
 			this->StandingsButton->Size = System::Drawing::Size(262, 63);
 			this->StandingsButton->TabIndex = 4;
 			this->StandingsButton->Text = L"Standings";
-			this->StandingsButton->UseVisualStyleBackColor = false; 
+			this->StandingsButton->UseVisualStyleBackColor = false;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(389, 46);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(243, 16);
+			this->label1->TabIndex = 9;
+			this->label1->Text = L"Club Name /t Manager /t City /t Founded";
 			// 
 			// ClubsForm
 			// 
@@ -249,6 +267,7 @@ namespace FootballAssociationDB {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1366, 792);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->listBox1);
 			this->Name = L"ClubsForm";
@@ -257,6 +276,7 @@ namespace FootballAssociationDB {
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -280,6 +300,46 @@ namespace FootballAssociationDB {
 			MessageBox::Show(ex->Message);
 		}
 	}
+
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	Form^ clubsForm = gcnew ClubsForm();
+	clubsForm->ShowDialog();
+	this->Show();
+}
 	
+	private: System::Void StaffButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		Form^ staffForm = gcnew StaffForm();
+		staffForm->ShowDialog();
+		this->Show();
+	}
+//private: System::Void StandingsButton_Click(System::Object^ sender, System::EventArgs^ e) {
+//	this->Hide();
+//	Form^ standingsForm = gcnew StandingsForm();
+//	standingsForm->ShowDialog();
+//	this->Show();
+//}
+
+
+private: System::Void GamesButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	Form^ gamesForm = gcnew GamesForm();
+	gamesForm->ShowDialog();
+	this->Show();
+}
+//private: System::Void PlayersButton_Click(System::Object^ sender, System::EventArgs^ e) {
+//	this->Hide();
+//	Form^ playersForm = gcnew PlayersForm();
+//	playersForm->ShowDialog();
+//	this->Show();
+//}
+	
+private: System::Void StadiumsButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	Form^ stadiumsForm = gcnew StadiumsForm();
+	stadiumsForm->ShowDialog();
+	this->Show();
+}
 };
 }
