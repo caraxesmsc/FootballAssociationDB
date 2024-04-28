@@ -1,5 +1,9 @@
 ﻿#pragma once
-
+#include "ClubsForm.h"
+#include "StadiumsForm.h"
+#include "StaffForm.h"
+#include "StandingsForm.h" 
+#include "GamesForm.h" // da ely by3ml include lel form ely h3mlha 3ashan a3rf a3ml call lel form mn el button
 namespace FootballAssociationDB {
 
 	using namespace System;
@@ -64,6 +68,8 @@ namespace FootballAssociationDB {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PlayersForm::typeid));
+
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->EditButton = (gcnew System::Windows::Forms::Button());
@@ -83,9 +89,9 @@ namespace FootballAssociationDB {
 			// 
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->ItemHeight = 16;
-			this->listBox1->Location = System::Drawing::Point(484, 232);
+			this->listBox1->Location = System::Drawing::Point(391, 104);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(855, 548);
+			this->listBox1->Size = System::Drawing::Size(948, 676);
 			this->listBox1->TabIndex = 0;
 			// 
 			// panel1
@@ -168,7 +174,7 @@ namespace FootballAssociationDB {
 			this->button1->Size = System::Drawing::Size(262, 63);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Clubs";
-			this->button1->UseVisualStyleBackColor = false;
+			this->button1->UseVisualStyleBackColor = false; 
 			// 
 			// StadiumsButton
 			// 
@@ -270,5 +276,7 @@ namespace FootballAssociationDB {
 			MessageBox::Show(ex->Message);
 		}
 	}
-	};
+ 
+
+};
 }
