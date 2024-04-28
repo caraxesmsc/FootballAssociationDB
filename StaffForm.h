@@ -144,7 +144,7 @@ namespace FootballAssociationDB {
 			this->EditButton->Name = L"EditButton";
 			this->EditButton->Size = System::Drawing::Size(74, 63);
 			this->EditButton->TabIndex = 11;
-			this->EditButton->Text = L"✏️";
+			this->EditButton->Text = L"🏠";
 			this->EditButton->UseVisualStyleBackColor = false;
 			// 
 			// SearchButton
