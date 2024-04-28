@@ -116,14 +116,14 @@ namespace FootballAssociationDB {
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->listBox4 = (gcnew System::Windows::Forms::ListBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->listBox5 = (gcnew System::Windows::Forms::ListBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->listBox4 = (gcnew System::Windows::Forms::ListBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->SuspendLayout();
@@ -285,7 +285,7 @@ namespace FootballAssociationDB {
 			this->listBox1->ItemHeight = 20;
 			this->listBox1->Location = System::Drawing::Point(32, 104);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(176, 664);
+			this->listBox1->Size = System::Drawing::Size(222, 664);
 			this->listBox1->TabIndex = 0;
 			// 
 			// label1
@@ -295,7 +295,7 @@ namespace FootballAssociationDB {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->label1->Location = System::Drawing::Point(65, 49);
+			this->label1->Location = System::Drawing::Point(93, 49);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(100, 41);
 			this->label1->TabIndex = 12;
@@ -320,84 +320,6 @@ namespace FootballAssociationDB {
 			this->panel2->Size = System::Drawing::Size(1021, 801);
 			this->panel2->TabIndex = 13;
 			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->label2->Location = System::Drawing::Point(243, 49);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(129, 41);
-			this->label2->TabIndex = 14;
-			this->label2->Text = L"Position";
-			// 
-			// listBox2
-			// 
-			this->listBox2->BackColor = System::Drawing::SystemColors::InactiveCaption;
-			this->listBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->listBox2->ForeColor = System::Drawing::Color::Brown;
-			this->listBox2->FormattingEnabled = true;
-			this->listBox2->ItemHeight = 20;
-			this->listBox2->Location = System::Drawing::Point(223, 104);
-			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(176, 664);
-			this->listBox2->TabIndex = 13;
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->label3->Location = System::Drawing::Point(438, 45);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(128, 41);
-			this->label3->TabIndex = 16;
-			this->label3->Text = L"Country";
-			// 
-			// listBox3
-			// 
-			this->listBox3->BackColor = System::Drawing::SystemColors::InactiveCaption;
-			this->listBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->listBox3->ForeColor = System::Drawing::Color::Brown;
-			this->listBox3->FormattingEnabled = true;
-			this->listBox3->ItemHeight = 20;
-			this->listBox3->Location = System::Drawing::Point(415, 104);
-			this->listBox3->Name = L"listBox3";
-			this->listBox3->Size = System::Drawing::Size(176, 664);
-			this->listBox3->TabIndex = 15;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->BackColor = System::Drawing::Color::Transparent;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->label4->Location = System::Drawing::Point(650, 45);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(81, 41);
-			this->label4->TabIndex = 18;
-			this->label4->Text = L"Club";
-			// 
-			// listBox4
-			// 
-			this->listBox4->BackColor = System::Drawing::SystemColors::InactiveCaption;
-			this->listBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->listBox4->ForeColor = System::Drawing::Color::Brown;
-			this->listBox4->FormattingEnabled = true;
-			this->listBox4->ItemHeight = 20;
-			this->listBox4->Location = System::Drawing::Point(606, 104);
-			this->listBox4->Name = L"listBox4";
-			this->listBox4->Size = System::Drawing::Size(176, 664);
-			this->listBox4->TabIndex = 17;
-			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
@@ -405,11 +327,11 @@ namespace FootballAssociationDB {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->label5->Location = System::Drawing::Point(791, 49);
+			this->label5->Location = System::Drawing::Point(843, 49);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(209, 41);
+			this->label5->Size = System::Drawing::Size(133, 41);
 			this->label5->TabIndex = 20;
-			this->label5->Text = L"Contract Ends";
+			this->label5->Text = L"Matches";
 			// 
 			// listBox5
 			// 
@@ -419,10 +341,88 @@ namespace FootballAssociationDB {
 			this->listBox5->ForeColor = System::Drawing::Color::Brown;
 			this->listBox5->FormattingEnabled = true;
 			this->listBox5->ItemHeight = 20;
-			this->listBox5->Location = System::Drawing::Point(798, 104);
+			this->listBox5->Location = System::Drawing::Point(850, 104);
 			this->listBox5->Name = L"listBox5";
-			this->listBox5->Size = System::Drawing::Size(176, 664);
+			this->listBox5->Size = System::Drawing::Size(124, 664);
 			this->listBox5->TabIndex = 19;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label4->Location = System::Drawing::Point(719, 49);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(94, 41);
+			this->label4->TabIndex = 18;
+			this->label4->Text = L"Goals";
+			// 
+			// listBox4
+			// 
+			this->listBox4->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox4->ForeColor = System::Drawing::Color::Brown;
+			this->listBox4->FormattingEnabled = true;
+			this->listBox4->ItemHeight = 20;
+			this->listBox4->Location = System::Drawing::Point(703, 104);
+			this->listBox4->Name = L"listBox4";
+			this->listBox4->Size = System::Drawing::Size(125, 664);
+			this->listBox4->TabIndex = 17;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label3->Location = System::Drawing::Point(532, 49);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(81, 41);
+			this->label3->TabIndex = 16;
+			this->label3->Text = L"Club";
+			// 
+			// listBox3
+			// 
+			this->listBox3->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox3->ForeColor = System::Drawing::Color::Brown;
+			this->listBox3->FormattingEnabled = true;
+			this->listBox3->ItemHeight = 20;
+			this->listBox3->Location = System::Drawing::Point(468, 104);
+			this->listBox3->Name = L"listBox3";
+			this->listBox3->Size = System::Drawing::Size(213, 664);
+			this->listBox3->TabIndex = 15;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label2->Location = System::Drawing::Point(320, 49);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(72, 41);
+			this->label2->TabIndex = 14;
+			this->label2->Text = L"Age";
+			// 
+			// listBox2
+			// 
+			this->listBox2->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox2->ForeColor = System::Drawing::Color::Brown;
+			this->listBox2->FormattingEnabled = true;
+			this->listBox2->ItemHeight = 20;
+			this->listBox2->Location = System::Drawing::Point(272, 104);
+			this->listBox2->Name = L"listBox2";
+			this->listBox2->Size = System::Drawing::Size(176, 664);
+			this->listBox2->TabIndex = 13;
 			// 
 			// PlayersForm
 			// 
@@ -451,27 +451,19 @@ namespace FootballAssociationDB {
 			SqlCommand cmd(query, % con);
 			SqlDataReader^ reader = cmd.ExecuteReader();
 
-			String^ query2 = " "; 
-			SqlDataReader^ reader2;
 			while (reader->Read())
 			{
-				//player name
-				listBox1->Items->Add(reader->GetString(1));
-				//player position
-				listBox2->Items->Add(reader->GetString(4));
-				//platr nationality
-				listBox3->Items->Add(reader->GetString(3));
-				//player club
-				query2 = "SELECT Club_Name FROM club WHERE Club_ID=" + reader->GetInt32(0) + ";";
-				SqlCommand cmd2(query2, % con);
-				reader2 = cmd2.ExecuteReader();
-				listBox4->Items->Add(reader2->GetString(0));
-
-				//contract end date
-				listBox5->Items->Add(reader->GetString(8));
-
 				
-
+				//Player Name
+				listBox1->Items->Add(reader->GetString(0));
+				//Age
+				listBox2->Items->Add(reader->GetInt32(3));
+				//club Name
+				listBox3->Items->Add(reader->GetString(1));
+				//Goal scored
+				listBox4->Items->Add(reader->GetInt32(2));
+				//match count
+				listBox5->Items->Add(reader->GetInt32(4));
 			}
 			con.Close();
 		}

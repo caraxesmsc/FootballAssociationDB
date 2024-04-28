@@ -446,15 +446,14 @@ using namespace System::Data::SqlClient;
 			{
 				// Home Team
 				listBox1->Items->Add(reader->GetString(3));
-// Away Team
+				// Away Team
 				listBox2->Items->Add(reader->GetString(4));
 				// Stadium
 				listBox3->Items->Add(reader->GetString(2));
 				//date only display date and no time
-
 				listBox4->Items->Add(reader->GetDateTime(0).ToString("dd/MM/yyyy"));
 				//this has only time and no date so use 
-//time
+				//time
 				 listBox5->Items->Add(reader->GetTimeSpan(1).ToString());
 			}
 			con.Close();
