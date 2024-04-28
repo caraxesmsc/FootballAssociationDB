@@ -100,6 +100,7 @@ namespace FootballAssociationDB {
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(955, 692);
 			this->listBox1->TabIndex = 0;
+			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &ClubsForm::listBox1_SelectedIndexChanged);
 			// 
 			// panel1
 			// 
@@ -340,6 +341,31 @@ private: System::Void StadiumsButton_Click(System::Object^ sender, System::Event
 	Form^ stadiumsForm = gcnew StadiumsForm();
 	stadiumsForm->ShowDialog();
 	this->Show();
+}
+private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	try {
+
+
+		String^ selectedClub = listBox1->SelectedItem->ToString();
+		String^ clubName = selectedClub->Substring(0, selectedClub->IndexOf("Managed by:"));
+
+
+		SqlConnection con(connectionStr);
+		con.Open();
+		String^ query = "SELECT * FROM GetTopGoalScorerForClub('" + clubName + "'); ";
+		SqlCommand cmd(query, % con);
+		SqlDataReader^ reader = cmd.ExecuteReader();
+		while (reader->Read())
+		{
+			MessageBox::Show("Club Top Scorer is: " + reader->GetString(1) + " Scored: " + reader->GetInt32(2));
+		}
+		con.Close();
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+
 }
 };
 }
