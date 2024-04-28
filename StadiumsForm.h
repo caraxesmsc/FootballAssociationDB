@@ -16,7 +16,10 @@ using namespace System::Data::SqlClient;
 	public ref class StadiumsForm : public System::Windows::Forms::Form
 	{
 	public:
-		String^ connectionStr = "Data Source=KassabLaptop;Initial Catalog=Football_Association;Integrated Security=True;"; // da el connection string 3ashan a3ml connect m3 el database W LAZM T5'YARO L BTA3K ENTA
+		// Kassab Connection
+		//String^ connectionStr = "Data Source=KassabLaptop;Initial Catalog=Football_Association;Integrated Security=True;";	 // da el connection string 3ashan a3ml connect m3 el database W LAZM T5'YARO L BTA3K ENTA
+		//Hossam Conenction
+		String^ connectionStr = "Data Source=LAPTOP-ABIJFMBV;Initial Catalog=Football_AssociationFinal;Integrated Security=True;";
 
 		StadiumsForm(void)
 		{
