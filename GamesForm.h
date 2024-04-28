@@ -444,7 +444,18 @@ using namespace System::Data::SqlClient;
 			SqlDataReader^ reader = cmd.ExecuteReader();
 			while (reader->Read())
 			{
-				listBox1->Items->Add(reader->GetDateTime(0) + reader->GetString(2) + reader->GetString(3) + reader->GetString(4));
+				// Home Team
+				listBox1->Items->Add(reader->GetString(3));
+// Away Team
+				listBox2->Items->Add(reader->GetString(4));
+				// Stadium
+				listBox3->Items->Add(reader->GetString(2));
+				//date only display date and no time
+
+				listBox4->Items->Add(reader->GetDateTime(0).ToString("dd/MM/yyyy"));
+				//this has only time and no date so use 
+//time
+				 listBox5->Items->Add(reader->GetTimeSpan(1).ToString());
 			}
 			con.Close();
 		}
