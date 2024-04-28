@@ -263,13 +263,12 @@ namespace FootballAssociationDB {
 			SqlConnection con(connectionStr);
 			con.Open();
 			//String^ query = "SELECT * FROM standing";
-			String^ query = "exec GetSortedStandings";
+			String^ query = "exec GetSortedStanding;";
 			SqlCommand cmd(query, % con);
 			SqlDataReader^ reader = cmd.ExecuteReader();
 			while (reader->Read())
 			{
-				// Add the name of the club to the list box
-				listBox1->Items->Add(reader->GetInt32(5) + " Has: " + reader->GetInt32(1));
+				listBox1->Items->Add(reader->GetInt32(0) + " " + reader->GetString(5) + " " + reader->GetInt32(1) + "      " + reader->GetInt32(3) + " " + reader->GetInt32(4));
 			}
 			con.Close();
 		}

@@ -256,12 +256,12 @@ using namespace System::Data::SqlClient;
 		try {
 			SqlConnection con(connectionStr);
 			con.Open();
-			String^ query = "SELECT * FROM FootballMatch";
+			String^ query = "SELECT * FROM GetAllFootballMatchDetails();";
 			SqlCommand cmd(query, % con);
 			SqlDataReader^ reader = cmd.ExecuteReader();
 			while (reader->Read())
 			{
-				listBox1->Items->Add(reader->GetDateTime(1));
+				listBox1->Items->Add(reader->GetDateTime(0) + reader->GetString(2) + reader->GetString(3) + reader->GetString(4));
 			}
 			con.Close();
 		}

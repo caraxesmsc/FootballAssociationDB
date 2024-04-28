@@ -358,8 +358,12 @@ private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, Syst
 		while (reader->Read())
 		{
 			MessageBox::Show("Club Top Scorer is: " + reader->GetString(1) + " Scored: " + reader->GetInt32(2));
+			con.Close();
+			return;
 		}
 		con.Close();
+		MessageBox::Show("There is no registered top scorer for " + clubName);
+
 	}
 	catch (Exception^ ex)
 	{

@@ -262,12 +262,12 @@ namespace FootballAssociationDB {
 		try {
 			SqlConnection con(connectionStr);
 			con.Open();
-			String^ query = "SELECT * FROM player";
+			String^ query = "SELECT * FROM GetPlayerDetails();";
 			SqlCommand cmd(query, % con);
 			SqlDataReader^ reader = cmd.ExecuteReader();
 			while (reader->Read())
 			{
-				listBox1->Items->Add(reader->GetString(1) + " Plays For: " + reader->GetInt32(10) + reader->GetString(3));
+				listBox1->Items->Add(reader->GetString(0) + reader->GetString(1) + reader->GetInt32(3) + reader->GetInt32(2) + +reader->GetInt32(4));
 			}
 			con.Close();
 		}
