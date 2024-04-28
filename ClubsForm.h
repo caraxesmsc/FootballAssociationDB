@@ -62,6 +62,13 @@ namespace FootballAssociationDB {
 	private: System::Windows::Forms::Button^ StaffButton;
 	private: System::Windows::Forms::Button^ StandingsButton;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::ListBox^ listBox2;
+	private: System::Windows::Forms::ListBox^ listBox3;
+	private: System::Windows::Forms::ListBox^ listBox4;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Panel^ panel2;
 	protected:
 
 	protected:
@@ -92,16 +99,28 @@ namespace FootballAssociationDB {
 			this->StaffButton = (gcnew System::Windows::Forms::Button());
 			this->StandingsButton = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
+			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
+			this->listBox4 = (gcnew System::Windows::Forms::ListBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
+			this->panel2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// listBox1
 			// 
+			this->listBox1->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox1->ForeColor = System::Drawing::Color::Firebrick;
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 16;
-			this->listBox1->Location = System::Drawing::Point(389, 88);
+			this->listBox1->ItemHeight = 20;
+			this->listBox1->Location = System::Drawing::Point(18, 88);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(955, 692);
+			this->listBox1->Size = System::Drawing::Size(228, 684);
 			this->listBox1->TabIndex = 0;
 			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &ClubsForm::listBox1_SelectedIndexChanged);
 			// 
@@ -133,7 +152,7 @@ namespace FootballAssociationDB {
 			this->EditButton->Name = L"EditButton";
 			this->EditButton->Size = System::Drawing::Size(74, 63);
 			this->EditButton->TabIndex = 11;
-			this->EditButton->Text = L"✏️";
+			this->EditButton->Text = L"🏠";
 			this->EditButton->UseVisualStyleBackColor = false;
 			// 
 			// SearchButton
@@ -176,7 +195,7 @@ namespace FootballAssociationDB {
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::IndianRed;
+			this->button1->BackColor = System::Drawing::Color::DimGray;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -259,11 +278,104 @@ namespace FootballAssociationDB {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(389, 46);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label1->Location = System::Drawing::Point(32, 29);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(243, 16);
+			this->label1->Size = System::Drawing::Size(191, 46);
 			this->label1->TabIndex = 9;
-			this->label1->Text = L"Club Name /t Manager /t City /t Founded";
+			this->label1->Text = L"Club Name";
+			// 
+			// listBox2
+			// 
+			this->listBox2->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox2->ForeColor = System::Drawing::Color::Firebrick;
+			this->listBox2->FormattingEnabled = true;
+			this->listBox2->ItemHeight = 20;
+			this->listBox2->Location = System::Drawing::Point(269, 88);
+			this->listBox2->Name = L"listBox2";
+			this->listBox2->Size = System::Drawing::Size(228, 684);
+			this->listBox2->TabIndex = 10;
+			// 
+			// listBox3
+			// 
+			this->listBox3->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox3->ForeColor = System::Drawing::Color::Firebrick;
+			this->listBox3->FormattingEnabled = true;
+			this->listBox3->ItemHeight = 20;
+			this->listBox3->Location = System::Drawing::Point(519, 88);
+			this->listBox3->Name = L"listBox3";
+			this->listBox3->Size = System::Drawing::Size(228, 684);
+			this->listBox3->TabIndex = 11;
+			// 
+			// listBox4
+			// 
+			this->listBox4->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox4->ForeColor = System::Drawing::Color::Firebrick;
+			this->listBox4->FormattingEnabled = true;
+			this->listBox4->ItemHeight = 20;
+			this->listBox4->Location = System::Drawing::Point(1126, 88);
+			this->listBox4->Name = L"listBox4";
+			this->listBox4->Size = System::Drawing::Size(228, 684);
+			this->listBox4->TabIndex = 12;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label2->Location = System::Drawing::Point(301, 29);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(158, 46);
+			this->label2->TabIndex = 13;
+			this->label2->Text = L"Club City";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label3->Location = System::Drawing::Point(515, 29);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(237, 46);
+			this->label3->TabIndex = 14;
+			this->label3->Text = L"Club Manager";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label4->Location = System::Drawing::Point(768, 29);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(233, 46);
+			this->label4->TabIndex = 15;
+			this->label4->Text = L"Club Founded";
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::Brown;
+			this->panel2->Controls->Add(this->label4);
+			this->panel2->Controls->Add(this->listBox3);
+			this->panel2->Controls->Add(this->label3);
+			this->panel2->Controls->Add(this->listBox2);
+			this->panel2->Controls->Add(this->label2);
+			this->panel2->Controls->Add(this->label1);
+			this->panel2->Controls->Add(this->listBox1);
+			this->panel2->Location = System::Drawing::Point(353, 0);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(1024, 798);
+			this->panel2->TabIndex = 16;
 			// 
 			// ClubsForm
 			// 
@@ -271,16 +383,17 @@ namespace FootballAssociationDB {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1366, 792);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->listBox4);
 			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->listBox1);
+			this->Controls->Add(this->panel2);
 			this->Name = L"ClubsForm";
 			this->Text = L"ClubsForm";
 			this->Load += gcnew System::EventHandler(this, &ClubsForm::ClubsForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -290,12 +403,20 @@ namespace FootballAssociationDB {
 			SqlConnection con(connectionStr);
 			con.Open();
 			String^ query = "SELECT * FROM club";
+
 			SqlCommand cmd(query, % con);
 			SqlDataReader^ reader = cmd.ExecuteReader();
 			while (reader->Read())
 			{
 				// Add the name of the club to the list box
-				listBox1->Items->Add(reader->GetString(1) + " Managed by: " + reader->GetString(2) + " Founded in the year: " + reader->GetInt32(4));
+				listBox1->Items->Add(reader->GetString(1));
+				//city
+				listBox2->Items->Add(reader->GetString(3));
+				//manager
+				listBox3->Items->Add(reader->GetString(2));
+				//founded
+				listBox4->Items->Add(reader->GetInt32(4));
+
 			}
 			con.Close();
 		}
@@ -373,6 +494,6 @@ private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, Syst
 		MessageBox::Show(ex->Message);
 	}
 
-}
+} 
 };
 }
