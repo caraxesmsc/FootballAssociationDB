@@ -40,7 +40,7 @@ using namespace System::Data::SqlClient;
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::ListBox^ listBox1;
+
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ EditButton;
 	private: System::Windows::Forms::Button^ SearchButton;
@@ -52,6 +52,19 @@ using namespace System::Data::SqlClient;
 	private: System::Windows::Forms::Button^ GamesButton;
 	private: System::Windows::Forms::Button^ StaffButton;
 	private: System::Windows::Forms::Button^ StandingsButton;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::ListBox^ listBox5;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::ListBox^ listBox4;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::ListBox^ listBox3;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::ListBox^ listBox2;
+	private: System::Windows::Forms::Label^ Home;
+
+	private: System::Windows::Forms::ListBox^ listBox1;
+	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::Label^ label1;
 	protected:
 
 	private:
@@ -67,7 +80,6 @@ using namespace System::Data::SqlClient;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->EditButton = (gcnew System::Windows::Forms::Button());
 			this->SearchButton = (gcnew System::Windows::Forms::Button());
@@ -79,17 +91,21 @@ using namespace System::Data::SqlClient;
 			this->GamesButton = (gcnew System::Windows::Forms::Button());
 			this->StaffButton = (gcnew System::Windows::Forms::Button());
 			this->StandingsButton = (gcnew System::Windows::Forms::Button());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->listBox5 = (gcnew System::Windows::Forms::ListBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->listBox4 = (gcnew System::Windows::Forms::ListBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
+			this->Home = (gcnew System::Windows::Forms::Label());
+			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
+			this->panel2->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// listBox1
-			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 16;
-			this->listBox1->Location = System::Drawing::Point(844, 440);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(482, 340);
-			this->listBox1->TabIndex = 0;
 			// 
 			// panel1
 			// 
@@ -119,7 +135,7 @@ using namespace System::Data::SqlClient;
 			this->EditButton->Name = L"EditButton";
 			this->EditButton->Size = System::Drawing::Size(74, 63);
 			this->EditButton->TabIndex = 11;
-			this->EditButton->Text = L"✏️";
+			this->EditButton->Text = L"🏠";
 			this->EditButton->UseVisualStyleBackColor = false;
 			// 
 			// SearchButton
@@ -201,7 +217,7 @@ using namespace System::Data::SqlClient;
 			// 
 			// GamesButton
 			// 
-			this->GamesButton->BackColor = System::Drawing::Color::IndianRed;
+			this->GamesButton->BackColor = System::Drawing::Color::DimGray;
 			this->GamesButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GamesButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
@@ -238,19 +254,183 @@ using namespace System::Data::SqlClient;
 			this->StandingsButton->Text = L"Standings";
 			this->StandingsButton->UseVisualStyleBackColor = false;
 			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Transparent;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label5->Location = System::Drawing::Point(880, 54);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(86, 41);
+			this->label5->TabIndex = 39;
+			this->label5->Text = L"Time";
+			// 
+			// listBox5
+			// 
+			this->listBox5->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox5->ForeColor = System::Drawing::Color::Brown;
+			this->listBox5->FormattingEnabled = true;
+			this->listBox5->ItemHeight = 20;
+			this->listBox5->Location = System::Drawing::Point(848, 107);
+			this->listBox5->Name = L"listBox5";
+			this->listBox5->Size = System::Drawing::Size(141, 664);
+			this->listBox5->TabIndex = 38;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label4->Location = System::Drawing::Point(718, 54);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(83, 41);
+			this->label4->TabIndex = 37;
+			this->label4->Text = L"Date";
+			// 
+			// listBox4
+			// 
+			this->listBox4->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox4->ForeColor = System::Drawing::Color::Brown;
+			this->listBox4->FormattingEnabled = true;
+			this->listBox4->ItemHeight = 20;
+			this->listBox4->Location = System::Drawing::Point(687, 107);
+			this->listBox4->Name = L"listBox4";
+			this->listBox4->Size = System::Drawing::Size(145, 664);
+			this->listBox4->TabIndex = 36;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label3->Location = System::Drawing::Point(510, 54);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(132, 41);
+			this->label3->TabIndex = 35;
+			this->label3->Text = L"Stadium";
+			// 
+			// listBox3
+			// 
+			this->listBox3->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox3->ForeColor = System::Drawing::Color::Brown;
+			this->listBox3->FormattingEnabled = true;
+			this->listBox3->ItemHeight = 20;
+			this->listBox3->Location = System::Drawing::Point(493, 107);
+			this->listBox3->Name = L"listBox3";
+			this->listBox3->Size = System::Drawing::Size(176, 664);
+			this->listBox3->TabIndex = 34;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label2->Location = System::Drawing::Point(298, 54);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(172, 41);
+			this->label2->TabIndex = 33;
+			this->label2->Text = L"Away Team";
+			// 
+			// listBox2
+			// 
+			this->listBox2->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox2->ForeColor = System::Drawing::Color::Brown;
+			this->listBox2->FormattingEnabled = true;
+			this->listBox2->ItemHeight = 20;
+			this->listBox2->Location = System::Drawing::Point(294, 107);
+			this->listBox2->Name = L"listBox2";
+			this->listBox2->Size = System::Drawing::Size(176, 664);
+			this->listBox2->TabIndex = 32;
+			// 
+			// Home
+			// 
+			this->Home->AutoSize = true;
+			this->Home->BackColor = System::Drawing::Color::Transparent;
+			this->Home->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Home->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->Home->Location = System::Drawing::Point(33, 54);
+			this->Home->Name = L"Home";
+			this->Home->Size = System::Drawing::Size(182, 41);
+			this->Home->TabIndex = 31;
+			this->Home->Text = L"Home Team";
+			// 
+			// listBox1
+			// 
+			this->listBox1->BackColor = System::Drawing::SystemColors::InactiveCaption;
+			this->listBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox1->ForeColor = System::Drawing::Color::Brown;
+			this->listBox1->FormattingEnabled = true;
+			this->listBox1->ItemHeight = 20;
+			this->listBox1->Location = System::Drawing::Point(39, 107);
+			this->listBox1->Name = L"listBox1";
+			this->listBox1->Size = System::Drawing::Size(176, 664);
+			this->listBox1->TabIndex = 30;
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::Brown;
+			this->panel2->Controls->Add(this->label1);
+			this->panel2->Controls->Add(this->label5);
+			this->panel2->Controls->Add(this->listBox5);
+			this->panel2->Controls->Add(this->label4);
+			this->panel2->Controls->Add(this->listBox1);
+			this->panel2->Controls->Add(this->listBox4);
+			this->panel2->Controls->Add(this->Home);
+			this->panel2->Controls->Add(this->label3);
+			this->panel2->Controls->Add(this->listBox2);
+			this->panel2->Controls->Add(this->listBox3);
+			this->panel2->Controls->Add(this->label2);
+			this->panel2->Location = System::Drawing::Point(349, 0);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(1021, 805);
+			this->panel2->TabIndex = 40;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label1->Location = System::Drawing::Point(230, 380);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(49, 41);
+			this->label1->TabIndex = 40;
+			this->label1->Text = L"Vs";
+			// 
 			// GamesForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1366, 792);
+			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->listBox1);
 			this->Name = L"GamesForm";
 			this->Text = L"GamesForm";
 			this->Load += gcnew System::EventHandler(this, &GamesForm::GamesForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
