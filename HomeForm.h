@@ -239,7 +239,7 @@ namespace FootballAssociationDB {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(240, 20);
 			this->label1->TabIndex = 14;
-			this->label1->Text = L"Thanks to Dr Wafaa and Eng.Lara ";
+			this->label1->Text = L"Thanks to Dr Niveen and Eng.Lara ";
 			// 
 			// label4
 			// 
