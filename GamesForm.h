@@ -194,6 +194,7 @@ using namespace System::Data::SqlClient;
 			this->EditButton->TabIndex = 11;
 			this->EditButton->Text = L"🏠";
 			this->EditButton->UseVisualStyleBackColor = false;
+			this->EditButton->Click += gcnew System::EventHandler(this, &GamesForm::EditButton_Click);
 			// 
 			// TittleLabel
 			// 
@@ -529,5 +530,8 @@ try {
 		}
 
 	}
+private: System::Void EditButton_Click(System::Object^ sender, System::EventArgs^ e) {
+this->Hide();
+}
 };
 }
