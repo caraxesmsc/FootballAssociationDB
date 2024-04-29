@@ -19,7 +19,7 @@ using namespace System::Data::SqlClient;
 		// Kassab Connection
 		//String^ connectionStr = "Data Source=KassabLaptop;Initial Catalog=Football_Association;Integrated Security=True;";	 // da el connection string 3ashan a3ml connect m3 el database W LAZM T5'YARO L BTA3K ENTA
 		//Hossam Conenction
-		String^ connectionStr = "Data Source=LAPTOP-ABIJFMBV;Initial Catalog=Football_AssociationDBFinal;Integrated Security=True;";
+		String^ connectionStr = "Data Source=LAPTOP-ABIJFMBV;Initial Catalog=Football_AssociationDBFinal2;Integrated Security=True;";
 
 		GamesForm(void)
 		{
@@ -43,8 +43,8 @@ using namespace System::Data::SqlClient;
 
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ EditButton;
-	private: System::Windows::Forms::Button^ SearchButton;
-	private: System::Windows::Forms::Button^ ViewButton;
+
+
 	private: System::Windows::Forms::Label^ TittleLabel;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ StadiumsButton;
@@ -65,6 +65,11 @@ using namespace System::Data::SqlClient;
 	private: System::Windows::Forms::ListBox^ listBox1;
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker2;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private: System::Windows::Forms::Button^ SearchButton;
 	protected:
 
 	private:
@@ -81,9 +86,12 @@ using namespace System::Data::SqlClient;
 		void InitializeComponent(void)
 		{
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->EditButton = (gcnew System::Windows::Forms::Button());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->SearchButton = (gcnew System::Windows::Forms::Button());
-			this->ViewButton = (gcnew System::Windows::Forms::Button());
+			this->EditButton = (gcnew System::Windows::Forms::Button());
 			this->TittleLabel = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->StadiumsButton = (gcnew System::Windows::Forms::Button());
@@ -110,9 +118,12 @@ using namespace System::Data::SqlClient;
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->panel1->Controls->Add(this->EditButton);
+			this->panel1->Controls->Add(this->label7);
+			this->panel1->Controls->Add(this->label6);
+			this->panel1->Controls->Add(this->dateTimePicker2);
+			this->panel1->Controls->Add(this->dateTimePicker1);
 			this->panel1->Controls->Add(this->SearchButton);
-			this->panel1->Controls->Add(this->ViewButton);
+			this->panel1->Controls->Add(this->EditButton);
 			this->panel1->Controls->Add(this->TittleLabel);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->StadiumsButton);
@@ -125,18 +136,37 @@ using namespace System::Data::SqlClient;
 			this->panel1->Size = System::Drawing::Size(356, 801);
 			this->panel1->TabIndex = 8;
 			// 
-			// EditButton
+			// label7
 			// 
-			this->EditButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->EditButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->EditButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->EditButton->Location = System::Drawing::Point(234, 109);
-			this->EditButton->Name = L"EditButton";
-			this->EditButton->Size = System::Drawing::Size(74, 63);
-			this->EditButton->TabIndex = 11;
-			this->EditButton->Text = L"🏠";
-			this->EditButton->UseVisualStyleBackColor = false;
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(46, 144);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(30, 16);
+			this->label7->TabIndex = 17;
+			this->label7->Text = L"and";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(46, 97);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(59, 16);
+			this->label6->TabIndex = 16;
+			this->label6->Text = L"Between";
+			// 
+			// dateTimePicker2
+			// 
+			this->dateTimePicker2->Location = System::Drawing::Point(46, 161);
+			this->dateTimePicker2->Name = L"dateTimePicker2";
+			this->dateTimePicker2->Size = System::Drawing::Size(173, 22);
+			this->dateTimePicker2->TabIndex = 15;
+			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->Location = System::Drawing::Point(46, 119);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(173, 22);
+			this->dateTimePicker1->TabIndex = 14;
 			// 
 			// SearchButton
 			// 
@@ -144,25 +174,26 @@ using namespace System::Data::SqlClient;
 			this->SearchButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->SearchButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->SearchButton->Location = System::Drawing::Point(140, 109);
+			this->SearchButton->Location = System::Drawing::Point(225, 119);
 			this->SearchButton->Name = L"SearchButton";
 			this->SearchButton->Size = System::Drawing::Size(74, 63);
-			this->SearchButton->TabIndex = 10;
+			this->SearchButton->TabIndex = 13;
 			this->SearchButton->Text = L"🔍";
 			this->SearchButton->UseVisualStyleBackColor = false;
+			this->SearchButton->Click += gcnew System::EventHandler(this, &GamesForm::SearchButton_Click);
 			// 
-			// ViewButton
+			// EditButton
 			// 
-			this->ViewButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ViewButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->EditButton->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->EditButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->ViewButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->ViewButton->Location = System::Drawing::Point(46, 109);
-			this->ViewButton->Name = L"ViewButton";
-			this->ViewButton->Size = System::Drawing::Size(74, 63);
-			this->ViewButton->TabIndex = 9;
-			this->ViewButton->Text = L"👁️";
-			this->ViewButton->UseVisualStyleBackColor = false;
+			this->EditButton->ForeColor = System::Drawing::Color::Firebrick;
+			this->EditButton->Location = System::Drawing::Point(49, 724);
+			this->EditButton->Name = L"EditButton";
+			this->EditButton->Size = System::Drawing::Size(259, 63);
+			this->EditButton->TabIndex = 11;
+			this->EditButton->Text = L"🏠";
+			this->EditButton->UseVisualStyleBackColor = false;
 			// 
 			// TittleLabel
 			// 
@@ -195,7 +226,7 @@ using namespace System::Data::SqlClient;
 			this->StadiumsButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->StadiumsButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StadiumsButton->Location = System::Drawing::Point(46, 655);
+			this->StadiumsButton->Location = System::Drawing::Point(46, 646);
 			this->StadiumsButton->Name = L"StadiumsButton";
 			this->StadiumsButton->Size = System::Drawing::Size(262, 63);
 			this->StadiumsButton->TabIndex = 6;
@@ -463,5 +494,40 @@ using namespace System::Data::SqlClient;
 			MessageBox::Show(ex->Message);
 		}
 	}
-	};
+	private: System::Void SearchButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		//get date from dateTimePicker1 and dateTimePicker2 and use the function gameSearch to get the games between these dates
+try {
+			SqlConnection con(connectionStr);
+			con.Open();
+			String^ query = "SELECT * FROM gameSearch('" + dateTimePicker1->Value.ToString("yyyy-MM-dd") + "', '" + dateTimePicker2->Value.ToString("yyyy-MM-dd") + "');";
+			SqlCommand cmd(query, % con);
+			SqlDataReader^ reader = cmd.ExecuteReader();
+			listBox1->Items->Clear();
+			listBox2->Items->Clear();
+			listBox3->Items->Clear();
+			listBox4->Items->Clear();
+			listBox5->Items->Clear();
+			while (reader->Read())
+			{
+				// Home Team
+				listBox1->Items->Add(reader->GetString(3));
+				// Away Team
+				listBox2->Items->Add(reader->GetString(4));
+				// Stadium
+				listBox3->Items->Add(reader->GetString(2));
+				//date only display date and no time
+				listBox4->Items->Add(reader->GetDateTime(0).ToString("dd/MM/yyyy"));
+				//this has only time and no date so use 
+				//time
+				listBox5->Items->Add(reader->GetTimeSpan(1).ToString());
+			}
+			con.Close();
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
+
+	}
+};
 }
