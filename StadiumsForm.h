@@ -43,8 +43,8 @@ using namespace System::Data::SqlClient;
 
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ EditButton;
-	private: System::Windows::Forms::Button^ SearchButton;
-	private: System::Windows::Forms::Button^ ViewButton;
+
+
 	private: System::Windows::Forms::Label^ TittleLabel;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ StadiumsButton;
@@ -80,8 +80,6 @@ using namespace System::Data::SqlClient;
 		{
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->EditButton = (gcnew System::Windows::Forms::Button());
-			this->SearchButton = (gcnew System::Windows::Forms::Button());
-			this->ViewButton = (gcnew System::Windows::Forms::Button());
 			this->TittleLabel = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->StadiumsButton = (gcnew System::Windows::Forms::Button());
@@ -106,8 +104,6 @@ using namespace System::Data::SqlClient;
 			// 
 			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->panel1->Controls->Add(this->EditButton);
-			this->panel1->Controls->Add(this->SearchButton);
-			this->panel1->Controls->Add(this->ViewButton);
 			this->panel1->Controls->Add(this->TittleLabel);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->StadiumsButton);
@@ -122,42 +118,17 @@ using namespace System::Data::SqlClient;
 			// 
 			// EditButton
 			// 
-			this->EditButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->EditButton->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->EditButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->EditButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->EditButton->Location = System::Drawing::Point(234, 109);
+			this->EditButton->Location = System::Drawing::Point(39, 672);
 			this->EditButton->Name = L"EditButton";
-			this->EditButton->Size = System::Drawing::Size(74, 63);
+			this->EditButton->Size = System::Drawing::Size(262, 63);
 			this->EditButton->TabIndex = 11;
-			this->EditButton->Text = L"✏️";
+			this->EditButton->Text = L"🏠";
 			this->EditButton->UseVisualStyleBackColor = false;
-			// 
-			// SearchButton
-			// 
-			this->SearchButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->SearchButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->SearchButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->SearchButton->Location = System::Drawing::Point(140, 109);
-			this->SearchButton->Name = L"SearchButton";
-			this->SearchButton->Size = System::Drawing::Size(74, 63);
-			this->SearchButton->TabIndex = 10;
-			this->SearchButton->Text = L"🔍";
-			this->SearchButton->UseVisualStyleBackColor = false;
-			// 
-			// ViewButton
-			// 
-			this->ViewButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ViewButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->ViewButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->ViewButton->Location = System::Drawing::Point(46, 109);
-			this->ViewButton->Name = L"ViewButton";
-			this->ViewButton->Size = System::Drawing::Size(74, 63);
-			this->ViewButton->TabIndex = 9;
-			this->ViewButton->Text = L"👁️";
-			this->ViewButton->UseVisualStyleBackColor = false;
+			this->EditButton->Click += gcnew System::EventHandler(this, &StadiumsForm::EditButton_Click);
 			// 
 			// TittleLabel
 			// 
@@ -177,7 +148,7 @@ using namespace System::Data::SqlClient;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button1->Location = System::Drawing::Point(46, 220);
+			this->button1->Location = System::Drawing::Point(39, 157);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(262, 63);
 			this->button1->TabIndex = 1;
@@ -190,7 +161,7 @@ using namespace System::Data::SqlClient;
 			this->StadiumsButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->StadiumsButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StadiumsButton->Location = System::Drawing::Point(46, 655);
+			this->StadiumsButton->Location = System::Drawing::Point(39, 592);
 			this->StadiumsButton->Name = L"StadiumsButton";
 			this->StadiumsButton->Size = System::Drawing::Size(262, 63);
 			this->StadiumsButton->TabIndex = 6;
@@ -203,7 +174,7 @@ using namespace System::Data::SqlClient;
 			this->PlayersButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->PlayersButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->PlayersButton->Location = System::Drawing::Point(46, 307);
+			this->PlayersButton->Location = System::Drawing::Point(39, 244);
 			this->PlayersButton->Name = L"PlayersButton";
 			this->PlayersButton->Size = System::Drawing::Size(262, 63);
 			this->PlayersButton->TabIndex = 2;
@@ -216,7 +187,7 @@ using namespace System::Data::SqlClient;
 			this->GamesButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GamesButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->GamesButton->Location = System::Drawing::Point(46, 568);
+			this->GamesButton->Location = System::Drawing::Point(39, 505);
 			this->GamesButton->Name = L"GamesButton";
 			this->GamesButton->Size = System::Drawing::Size(262, 63);
 			this->GamesButton->TabIndex = 5;
@@ -229,7 +200,7 @@ using namespace System::Data::SqlClient;
 			this->StaffButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->StaffButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StaffButton->Location = System::Drawing::Point(46, 394);
+			this->StaffButton->Location = System::Drawing::Point(39, 331);
 			this->StaffButton->Name = L"StaffButton";
 			this->StaffButton->Size = System::Drawing::Size(262, 63);
 			this->StaffButton->TabIndex = 3;
@@ -242,7 +213,7 @@ using namespace System::Data::SqlClient;
 			this->StandingsButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->StandingsButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StandingsButton->Location = System::Drawing::Point(46, 481);
+			this->StandingsButton->Location = System::Drawing::Point(39, 418);
 			this->StandingsButton->Name = L"StandingsButton";
 			this->StandingsButton->Size = System::Drawing::Size(262, 63);
 			this->StandingsButton->TabIndex = 4;
@@ -414,5 +385,8 @@ listBox4->Items->Add(reader->GetInt32(1));
 			MessageBox::Show(ex->Message);
 		}
 	}
-	};
+	private: System::Void EditButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	}
+};
 }
