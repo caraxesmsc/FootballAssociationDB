@@ -49,16 +49,23 @@ namespace FootballAssociationDB {
 	private: System::Windows::Forms::Button^ GamesButton;
 	private: System::Windows::Forms::Button^ StandingsButton;
 	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Button^ ViewButton;
-	private: System::Windows::Forms::Label^ TittleLabel;
 
 
-	private: System::Windows::Forms::Button^ EditButton;
 
-	private: System::Windows::Forms::Button^ SearchButton;
+
+
+
+
 
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label9;
 
 
 
@@ -86,22 +93,25 @@ namespace FootballAssociationDB {
 			this->GamesButton = (gcnew System::Windows::Forms::Button());
 			this->StandingsButton = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->EditButton = (gcnew System::Windows::Forms::Button());
-			this->SearchButton = (gcnew System::Windows::Forms::Button());
-			this->ViewButton = (gcnew System::Windows::Forms::Button());
-			this->TittleLabel = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::IndianRed;
+			this->button1->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button1->Location = System::Drawing::Point(46, 220);
+			this->button1->ForeColor = System::Drawing::Color::Brown;
+			this->button1->Location = System::Drawing::Point(45, 154);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(262, 63);
 			this->button1->TabIndex = 1;
@@ -111,11 +121,11 @@ namespace FootballAssociationDB {
 			// 
 			// PlayersButton
 			// 
-			this->PlayersButton->BackColor = System::Drawing::Color::IndianRed;
+			this->PlayersButton->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->PlayersButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->PlayersButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->PlayersButton->Location = System::Drawing::Point(46, 307);
+			this->PlayersButton->ForeColor = System::Drawing::Color::Brown;
+			this->PlayersButton->Location = System::Drawing::Point(45, 241);
 			this->PlayersButton->Name = L"PlayersButton";
 			this->PlayersButton->Size = System::Drawing::Size(262, 63);
 			this->PlayersButton->TabIndex = 2;
@@ -125,11 +135,11 @@ namespace FootballAssociationDB {
 			// 
 			// StaffButton
 			// 
-			this->StaffButton->BackColor = System::Drawing::Color::IndianRed;
+			this->StaffButton->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->StaffButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->StaffButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StaffButton->Location = System::Drawing::Point(46, 394);
+			this->StaffButton->ForeColor = System::Drawing::Color::Brown;
+			this->StaffButton->Location = System::Drawing::Point(45, 328);
 			this->StaffButton->Name = L"StaffButton";
 			this->StaffButton->Size = System::Drawing::Size(262, 63);
 			this->StaffButton->TabIndex = 3;
@@ -139,11 +149,11 @@ namespace FootballAssociationDB {
 			// 
 			// StadiumsButton
 			// 
-			this->StadiumsButton->BackColor = System::Drawing::Color::IndianRed;
+			this->StadiumsButton->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->StadiumsButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->StadiumsButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StadiumsButton->Location = System::Drawing::Point(46, 655);
+			this->StadiumsButton->ForeColor = System::Drawing::Color::Brown;
+			this->StadiumsButton->Location = System::Drawing::Point(45, 589);
 			this->StadiumsButton->Name = L"StadiumsButton";
 			this->StadiumsButton->Size = System::Drawing::Size(262, 63);
 			this->StadiumsButton->TabIndex = 6;
@@ -153,11 +163,11 @@ namespace FootballAssociationDB {
 			// 
 			// GamesButton
 			// 
-			this->GamesButton->BackColor = System::Drawing::Color::IndianRed;
+			this->GamesButton->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->GamesButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->GamesButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->GamesButton->Location = System::Drawing::Point(46, 568);
+			this->GamesButton->ForeColor = System::Drawing::Color::Brown;
+			this->GamesButton->Location = System::Drawing::Point(45, 502);
 			this->GamesButton->Name = L"GamesButton";
 			this->GamesButton->Size = System::Drawing::Size(262, 63);
 			this->GamesButton->TabIndex = 5;
@@ -167,11 +177,11 @@ namespace FootballAssociationDB {
 			// 
 			// StandingsButton
 			// 
-			this->StandingsButton->BackColor = System::Drawing::Color::IndianRed;
+			this->StandingsButton->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->StandingsButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->StandingsButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StandingsButton->Location = System::Drawing::Point(46, 481);
+			this->StandingsButton->ForeColor = System::Drawing::Color::Brown;
+			this->StandingsButton->Location = System::Drawing::Point(45, 415);
 			this->StandingsButton->Name = L"StandingsButton";
 			this->StandingsButton->Size = System::Drawing::Size(262, 63);
 			this->StandingsButton->TabIndex = 4;
@@ -179,51 +189,9 @@ namespace FootballAssociationDB {
 			this->StandingsButton->UseVisualStyleBackColor = false;
 			this->StandingsButton->Click += gcnew System::EventHandler(this, &HomeForm::StandingsButton_Click);
 			// 
-			// EditButton
-			// 
-			this->EditButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->EditButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->EditButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->EditButton->Location = System::Drawing::Point(234, 109);
-			this->EditButton->Name = L"EditButton";
-			this->EditButton->Size = System::Drawing::Size(74, 63);
-			this->EditButton->TabIndex = 11;
-			this->EditButton->Text = L"✏️";
-			this->EditButton->UseVisualStyleBackColor = false;
-			// 
-			// SearchButton
-			// 
-			this->SearchButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->SearchButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->SearchButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->SearchButton->Location = System::Drawing::Point(140, 109);
-			this->SearchButton->Name = L"SearchButton";
-			this->SearchButton->Size = System::Drawing::Size(74, 63);
-			this->SearchButton->TabIndex = 10;
-			this->SearchButton->Text = L"🔍";
-			this->SearchButton->UseVisualStyleBackColor = false;
-			// 
-			// ViewButton
-			// 
-			this->ViewButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ViewButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->ViewButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->ViewButton->Location = System::Drawing::Point(46, 109);
-			this->ViewButton->Name = L"ViewButton";
-			this->ViewButton->Size = System::Drawing::Size(74, 63);
-			this->ViewButton->TabIndex = 9;
-			this->ViewButton->Text = L"👁️";
-			this->ViewButton->UseVisualStyleBackColor = false;
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->panel1->Controls->Add(this->EditButton);
-			this->panel1->Controls->Add(this->SearchButton);
-			this->panel1->Controls->Add(this->ViewButton);
-			this->panel1->Controls->Add(this->TittleLabel);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->StadiumsButton);
 			this->panel1->Controls->Add(this->PlayersButton);
@@ -235,26 +203,13 @@ namespace FootballAssociationDB {
 			this->panel1->Size = System::Drawing::Size(356, 801);
 			this->panel1->TabIndex = 7;
 			// 
-			// 
-			// TittleLabel
-			// 
-			this->TittleLabel->AutoSize = true;
-			this->TittleLabel->BackColor = System::Drawing::Color::Transparent;
-			this->TittleLabel->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 28, System::Drawing::FontStyle::Bold));
-			this->TittleLabel->ForeColor = System::Drawing::Color::Brown;
-			this->TittleLabel->Location = System::Drawing::Point(98, 30);
-			this->TittleLabel->Name = L"TittleLabel";
-			this->TittleLabel->Size = System::Drawing::Size(157, 62);
-			this->TittleLabel->TabIndex = 8;
-			this->TittleLabel->Text = L"Home";
-			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 46, System::Drawing::FontStyle::Bold));
 			this->label2->ForeColor = System::Drawing::Color::White;
-			this->label2->Location = System::Drawing::Point(600, 307);
+			this->label2->Location = System::Drawing::Point(598, 326);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(462, 102);
 			this->label2->TabIndex = 12;
@@ -266,12 +221,104 @@ namespace FootballAssociationDB {
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 40, System::Drawing::FontStyle::Bold));
 			this->label3->ForeColor = System::Drawing::Color::White;
-			this->label3->Location = System::Drawing::Point(453, 428);
+			this->label3->Location = System::Drawing::Point(455, 415);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(757, 89);
 			this->label3->TabIndex = 13;
 			this->label3->Text = L"Football Association DB";
 			this->label3->Click += gcnew System::EventHandler(this, &HomeForm::label3_Click);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::White;
+			this->label1->Location = System::Drawing::Point(704, 545);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(240, 20);
+			this->label1->TabIndex = 14;
+			this->label1->Text = L"Thanks to Dr Wafaa and Eng.Lara ";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::White;
+			this->label4->Location = System::Drawing::Point(688, 576);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(269, 20);
+			this->label4->TabIndex = 15;
+			this->label4->Text = L"Mohamed Hossam Abdelalim 21p0254";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Transparent;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->ForeColor = System::Drawing::Color::White;
+			this->label5->Location = System::Drawing::Point(701, 596);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(243, 20);
+			this->label5->TabIndex = 16;
+			this->label5->Text = L"Youssef Ayman Mohamed 21P0010";
+			this->label5->Click += gcnew System::EventHandler(this, &HomeForm::label5_Click);
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Transparent;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->ForeColor = System::Drawing::Color::White;
+			this->label6->Location = System::Drawing::Point(717, 616);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(218, 20);
+			this->label6->TabIndex = 17;
+			this->label6->Text = L"Arwa Faisal Mohamed 21p0073";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::Transparent;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->ForeColor = System::Drawing::Color::White;
+			this->label7->Location = System::Drawing::Point(747, 636);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(159, 20);
+			this->label7->TabIndex = 18;
+			this->label7->Text = L"Patrick ramez 21P0180";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::Color::Transparent;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->ForeColor = System::Drawing::Color::White;
+			this->label8->Location = System::Drawing::Point(717, 656);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(218, 20);
+			this->label8->TabIndex = 19;
+			this->label8->Text = L"Monica Hany Makram 21P0173";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::Color::Transparent;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::Color::White;
+			this->label9->Location = System::Drawing::Point(709, 676);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(234, 20);
+			this->label9->TabIndex = 20;
+			this->label9->Text = L"Shahd Ashraf Mahmoud 2100480";
 			// 
 			// HomeForm
 			// 
@@ -280,6 +327,13 @@ namespace FootballAssociationDB {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1366, 792);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->panel1);
@@ -288,7 +342,6 @@ namespace FootballAssociationDB {
 			this->Text = L"HomeForm";
 			this->Load += gcnew System::EventHandler(this, &HomeForm::HomeForm_Load);
 			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -335,6 +388,8 @@ private: System::Void PlayersButton_Click(System::Object^ sender, System::EventA
 private: System::Void HomeForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
