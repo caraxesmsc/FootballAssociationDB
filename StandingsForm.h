@@ -540,7 +540,7 @@ listBox5->Items->Clear();
 			{
 
 				//position 
-				listBox1->Items->Add(reader->GetInt32(2));	
+				//listBox1->Items->Add(reader->GetInt32(2));	
 				//club name
 				listBox2->Items->Add(reader->GetString(6));
 				//points
@@ -551,6 +551,18 @@ listBox5->Items->Clear();
 				listBox5->Items->Add(reader->GetInt32(4));
 
 			}
+			listBox1->Items->Add(1);
+			listBox1->Items->Add(2);
+			listBox1->Items->Add(3);
+			listBox1->Items->Add(4);
+			listBox1->Items->Add(5);
+			listBox1->Items->Add(6);
+
+			listBox1->Items->Add(7);
+
+			listBox1->Items->Add(8);
+			listBox1->Items->Add(9);
+			listBox1->Items->Add(10);
 			con.Close();
 
 			//change the label to top 3
@@ -584,7 +596,7 @@ try {
 		{
 
 			//position 
-			listBox1->Items->Add(reader->GetInt32(2));
+			//listBox1->Items->Add(reader->GetInt32(2));
 			//club name
 			listBox2->Items->Add(reader->GetString(6));
 			//points
@@ -595,6 +607,9 @@ try {
 			listBox5->Items->Add(reader->GetInt32(4));
 
 		}
+		listBox1->Items->Add(1);
+listBox1->Items->Add(2);
+listBox1->Items->Add(3); 
 		con.Close();
 
 		//change the label to top 3
@@ -630,7 +645,7 @@ try {
 		{
 
 			//position 
-			listBox1->Items->Add(reader->GetInt32(2));
+			//listBox1->Items->Add(reader->GetInt32(2));
 			//club name
 			listBox2->Items->Add(reader->GetString(6));
 			//points
@@ -641,6 +656,10 @@ try {
 			listBox5->Items->Add(reader->GetInt32(4));
 
 		}
+		listBox1->Items->Add(20);
+		listBox1->Items->Add(19);
+		listBox1->Items->Add(18);
+
 		con.Close();
 
 		//change the label to top 3
@@ -674,7 +693,8 @@ try {
 		{
 
 			//position 
-			listBox1->Items->Add(reader->GetInt32(2));
+			//listBox1->Items->Add(reader->GetInt32(2));
+			// 
 			//club name
 			listBox2->Items->Add(reader->GetString(6));
 			//points
@@ -685,6 +705,18 @@ try {
 			listBox5->Items->Add(reader->GetInt32(4));
 
 		}
+		//harcode the positions inl ist box 1 from 20 to 11
+		listBox1->Items->Add(20);
+listBox1->Items->Add(19);
+listBox1->Items->Add(18);
+listBox1->Items->Add(17);
+
+listBox1->Items->Add(16);
+listBox1->Items->Add(15);
+listBox1->Items->Add(14);
+listBox1->Items->Add(13);
+listBox1->Items->Add(12);
+listBox1->Items->Add(11);
 		con.Close();
 
 		//change the label to top 3
