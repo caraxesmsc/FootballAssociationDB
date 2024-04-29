@@ -196,6 +196,7 @@ namespace FootballAssociationDB {
 			this->EditButton->TabIndex = 11;
 			this->EditButton->Text = L"🏠";
 			this->EditButton->UseVisualStyleBackColor = false;
+			this->EditButton->Click += gcnew System::EventHandler(this, &StandingsForm::EditButton_Click);
 			// 
 			// SearchButton
 			// 
@@ -693,6 +694,9 @@ try {
 	{
 		MessageBox::Show(ex->Message);
 	}
+}
+private: System::Void EditButton_Click(System::Object^ sender, System::EventArgs^ e) {
+this->Hide(); 
 }
 };
 }
