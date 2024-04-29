@@ -25,7 +25,7 @@ namespace FootballAssociationDB {
 		// Kassab Connection
 		//String^ connectionStr = "Data Source=KassabLaptop;Initial Catalog=Football_Association;Integrated Security=True;";	 // da el connection string 3ashan a3ml connect m3 el database W LAZM T5'YARO L BTA3K ENTA
 		//Hossam Conenction
-		String^ connectionStr = "Data Source=LAPTOP-ABIJFMBV;Initial Catalog=Football_AssociationDBFinal;Integrated Security=True;";
+		String^ connectionStr = "Data Source=LAPTOP-ABIJFMBV;Initial Catalog=Football_AssociationDBFinal2;Integrated Security=True;";
 
 		StandingsForm(void)
 		{
@@ -49,8 +49,8 @@ namespace FootballAssociationDB {
 
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ EditButton;
-	private: System::Windows::Forms::Button^ SearchButton;
-	private: System::Windows::Forms::Button^ ViewButton;
+
+
 	private: System::Windows::Forms::Label^ TittleLabel;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ StadiumsButton;
@@ -69,6 +69,15 @@ namespace FootballAssociationDB {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::ListBox^ listBox1;
 	private: System::Windows::Forms::Panel^ panel2;
+
+
+
+
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ SearchButton;
 	protected:
 
 	private:
@@ -85,9 +94,11 @@ namespace FootballAssociationDB {
 		void InitializeComponent(void)
 		{
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->EditButton = (gcnew System::Windows::Forms::Button());
 			this->SearchButton = (gcnew System::Windows::Forms::Button());
-			this->ViewButton = (gcnew System::Windows::Forms::Button());
 			this->TittleLabel = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->StadiumsButton = (gcnew System::Windows::Forms::Button());
@@ -106,6 +117,7 @@ namespace FootballAssociationDB {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->SuspendLayout();
@@ -113,9 +125,11 @@ namespace FootballAssociationDB {
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->panel1->Controls->Add(this->button3);
+			this->panel1->Controls->Add(this->button4);
+			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->EditButton);
 			this->panel1->Controls->Add(this->SearchButton);
-			this->panel1->Controls->Add(this->ViewButton);
 			this->panel1->Controls->Add(this->TittleLabel);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->StadiumsButton);
@@ -128,44 +142,74 @@ namespace FootballAssociationDB {
 			this->panel1->Size = System::Drawing::Size(356, 801);
 			this->panel1->TabIndex = 8;
 			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::Color::Firebrick;
+			this->button3->Location = System::Drawing::Point(196, 161);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(102, 41);
+			this->button3->TabIndex = 14;
+			this->button3->Text = L"Low 10";
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &StandingsForm::button3_Click);
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->ForeColor = System::Drawing::Color::Firebrick;
+			this->button4->Location = System::Drawing::Point(196, 105);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(102, 41);
+			this->button4->TabIndex = 13;
+			this->button4->Text = L"Low 3";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &StandingsForm::button4_Click);
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::Color::Firebrick;
+			this->button2->Location = System::Drawing::Point(46, 161);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(102, 41);
+			this->button2->TabIndex = 12;
+			this->button2->Text = L"Top 10";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &StandingsForm::button2_Click);
+			// 
 			// EditButton
 			// 
-			this->EditButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->EditButton->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->EditButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->EditButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->EditButton->Location = System::Drawing::Point(234, 109);
+			this->EditButton->Location = System::Drawing::Point(46, 717);
 			this->EditButton->Name = L"EditButton";
-			this->EditButton->Size = System::Drawing::Size(74, 63);
+			this->EditButton->Size = System::Drawing::Size(262, 63);
 			this->EditButton->TabIndex = 11;
 			this->EditButton->Text = L"🏠";
 			this->EditButton->UseVisualStyleBackColor = false;
 			// 
 			// SearchButton
 			// 
-			this->SearchButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->SearchButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->SearchButton->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->SearchButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->SearchButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->SearchButton->Location = System::Drawing::Point(140, 109);
+			this->SearchButton->Location = System::Drawing::Point(46, 105);
 			this->SearchButton->Name = L"SearchButton";
-			this->SearchButton->Size = System::Drawing::Size(74, 63);
+			this->SearchButton->Size = System::Drawing::Size(102, 41);
 			this->SearchButton->TabIndex = 10;
-			this->SearchButton->Text = L"🔍";
+			this->SearchButton->Text = L"Top 3";
 			this->SearchButton->UseVisualStyleBackColor = false;
-			// 
-			// ViewButton
-			// 
-			this->ViewButton->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ViewButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->ViewButton->ForeColor = System::Drawing::Color::Firebrick;
-			this->ViewButton->Location = System::Drawing::Point(46, 109);
-			this->ViewButton->Name = L"ViewButton";
-			this->ViewButton->Size = System::Drawing::Size(74, 63);
-			this->ViewButton->TabIndex = 9;
-			this->ViewButton->Text = L"👁️";
-			this->ViewButton->UseVisualStyleBackColor = false;
+			this->SearchButton->Click += gcnew System::EventHandler(this, &StandingsForm::SearchButton_Click);
 			// 
 			// TittleLabel
 			// 
@@ -185,7 +229,7 @@ namespace FootballAssociationDB {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button1->Location = System::Drawing::Point(46, 220);
+			this->button1->Location = System::Drawing::Point(46, 228);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(262, 63);
 			this->button1->TabIndex = 1;
@@ -198,7 +242,7 @@ namespace FootballAssociationDB {
 			this->StadiumsButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->StadiumsButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StadiumsButton->Location = System::Drawing::Point(46, 655);
+			this->StadiumsButton->Location = System::Drawing::Point(46, 634);
 			this->StadiumsButton->Name = L"StadiumsButton";
 			this->StadiumsButton->Size = System::Drawing::Size(262, 63);
 			this->StadiumsButton->TabIndex = 6;
@@ -224,7 +268,7 @@ namespace FootballAssociationDB {
 			this->GamesButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GamesButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->GamesButton->Location = System::Drawing::Point(46, 568);
+			this->GamesButton->Location = System::Drawing::Point(46, 553);
 			this->GamesButton->Name = L"GamesButton";
 			this->GamesButton->Size = System::Drawing::Size(262, 63);
 			this->GamesButton->TabIndex = 5;
@@ -237,7 +281,7 @@ namespace FootballAssociationDB {
 			this->StaffButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->StaffButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StaffButton->Location = System::Drawing::Point(46, 394);
+			this->StaffButton->Location = System::Drawing::Point(46, 391);
 			this->StaffButton->Name = L"StaffButton";
 			this->StaffButton->Size = System::Drawing::Size(262, 63);
 			this->StaffButton->TabIndex = 3;
@@ -250,7 +294,7 @@ namespace FootballAssociationDB {
 			this->StandingsButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->StandingsButton->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->StandingsButton->Location = System::Drawing::Point(46, 481);
+			this->StandingsButton->Location = System::Drawing::Point(46, 469);
 			this->StandingsButton->Name = L"StandingsButton";
 			this->StandingsButton->Size = System::Drawing::Size(262, 63);
 			this->StandingsButton->TabIndex = 4;
@@ -390,6 +434,7 @@ namespace FootballAssociationDB {
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::Brown;
+			this->panel2->Controls->Add(this->label6);
 			this->panel2->Controls->Add(this->label5);
 			this->panel2->Controls->Add(this->listBox5);
 			this->panel2->Controls->Add(this->label4);
@@ -404,6 +449,19 @@ namespace FootballAssociationDB {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(1014, 802);
 			this->panel2->TabIndex = 40;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Transparent;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label6->Location = System::Drawing::Point(379, 16);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(198, 41);
+			this->label6->TabIndex = 40;
+			this->label6->Text = L"All Standings";
 			// 
 			// StandingsForm
 			// 
@@ -459,5 +517,182 @@ namespace FootballAssociationDB {
 
 
 
-	};
+	private: System::Void SearchButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		//perform the function of top3Standings()
+try {
+			SqlConnection con(connectionStr);
+			con.Open();
+			//String^ query = "SELECT * FROM standing";
+			String^ query = "SELECT * FROM top3Standings();";
+
+			SqlCommand cmd(query, % con);
+			SqlDataReader^ reader = cmd.ExecuteReader();
+
+			//clear 
+
+listBox1->Items->Clear();
+listBox2->Items->Clear();
+listBox3->Items->Clear();
+listBox4->Items->Clear();
+listBox5->Items->Clear();
+			while (reader->Read())
+			{
+
+				//position 
+				listBox1->Items->Add(reader->GetInt32(2));	
+				//club name
+				listBox2->Items->Add(reader->GetString(6));
+				//points
+				listBox3->Items->Add(reader->GetInt32(1));
+				//goals for
+				listBox4->Items->Add(reader->GetInt32(3));
+				//goals against
+				listBox5->Items->Add(reader->GetInt32(4));
+
+			}
+			con.Close();
+
+			//change the label to top 3
+label6->Text = "Top 3 Standings";
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
+	}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	//do the same for SearchButton_Click but using a sql function called top10Standings()
+try {
+		SqlConnection con(connectionStr);
+		con.Open();
+		//String^ query = "SELECT * FROM standing";
+		String^ query = "SELECT * FROM top10Standings();";
+
+		SqlCommand cmd(query, % con);
+		SqlDataReader^ reader = cmd.ExecuteReader();
+
+		//clear 
+
+		listBox1->Items->Clear();
+		listBox2->Items->Clear();
+		listBox3->Items->Clear();
+		listBox4->Items->Clear();
+		listBox5->Items->Clear();
+		while (reader->Read())
+		{
+
+			//position 
+			listBox1->Items->Add(reader->GetInt32(2));
+			//club name
+			listBox2->Items->Add(reader->GetString(6));
+			//points
+			listBox3->Items->Add(reader->GetInt32(1));
+			//goals for
+			listBox4->Items->Add(reader->GetInt32(3));
+			//goals against
+			listBox5->Items->Add(reader->GetInt32(4));
+
+		}
+		con.Close();
+
+		//change the label to top 3
+		label6->Text = "Top 10 Standings";
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+
+
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	//do the same for SearchButton_Click but using a sql function called bottom3Standings()
+try {
+		SqlConnection con(connectionStr);
+		con.Open();
+		//String^ query = "SELECT * FROM standing";
+		String^ query = "SELECT * FROM bottom3Standings();";
+
+		SqlCommand cmd(query, % con);
+		SqlDataReader^ reader = cmd.ExecuteReader();
+
+		//clear 
+
+		listBox1->Items->Clear();
+		listBox2->Items->Clear();
+		listBox3->Items->Clear();
+		listBox4->Items->Clear();
+		listBox5->Items->Clear();
+		while (reader->Read())
+		{
+
+			//position 
+			listBox1->Items->Add(reader->GetInt32(2));
+			//club name
+			listBox2->Items->Add(reader->GetString(6));
+			//points
+			listBox3->Items->Add(reader->GetInt32(1));
+			//goals for
+			listBox4->Items->Add(reader->GetInt32(3));
+			//goals against
+			listBox5->Items->Add(reader->GetInt32(4));
+
+		}
+		con.Close();
+
+		//change the label to top 3
+		label6->Text = "Bottom 3 Standings";
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+//do the same for SearchButton_Click but using a sql function called bottom10Standings()
+try {
+		SqlConnection con(connectionStr);
+		con.Open();
+		//String^ query = "SELECT * FROM standing";
+		String^ query = "SELECT * FROM bottom10Standings();";
+
+		SqlCommand cmd(query, % con);
+		SqlDataReader^ reader = cmd.ExecuteReader();
+
+		//clear 
+
+		listBox1->Items->Clear();
+		listBox2->Items->Clear();
+		listBox3->Items->Clear();
+		listBox4->Items->Clear();
+		listBox5->Items->Clear();
+		while (reader->Read())
+		{
+
+			//position 
+			listBox1->Items->Add(reader->GetInt32(2));
+			//club name
+			listBox2->Items->Add(reader->GetString(6));
+			//points
+			listBox3->Items->Add(reader->GetInt32(1));
+			//goals for
+			listBox4->Items->Add(reader->GetInt32(3));
+			//goals against
+			listBox5->Items->Add(reader->GetInt32(4));
+
+		}
+		con.Close();
+
+		//change the label to top 3
+		label6->Text = "Bottom 10 Standings";
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+}
+};
 }
